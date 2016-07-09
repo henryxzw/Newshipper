@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements BDLocationListener {
 	private LocationClient mLocClient;
-
+/**
+ * 测试github
+ */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

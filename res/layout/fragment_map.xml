@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+     >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <RelativeLayout
+                android:id="@+id/rela_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/img_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:src="@drawable/tiem_select" />
+
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:layout_toRightOf="@id/img_time"
+                    android:text="选择装货时间"
+                    android:textColor="@color/hongse"
+                    android:textSize="18dip" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/text_gray1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip" >
+
+                <RelativeLayout
+                    android:id="@+id/rela_where"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dip" >
+
+                    <TextView
+                        android:id="@+id/text_zhuanghuo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="从哪里装货"
+                        android:textColor="@color/text_gray1" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewview"
+                    android:layout_width="15dip"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@id/rela_where"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/text_gray1" />
+
+                <View
+                    android:id="@+id/view_zhong"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@id/rela_where"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@id/viewview"
+                    android:background="@color/text_gray1" />
+
+                <RelativeLayout
+                    android:id="@+id/rela_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_zhong"
+                    android:layout_marginLeft="55dip"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:id="@+id/text_xiehuo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="到哪里卸货"
+                        android:textColor="@color/text_gray1" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@id/rela_to"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/text_gray1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dip"
+                    android:layout_marginLeft="14dip" >
+
+                    <View
+                        android:id="@+id/view_shang"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:background="@drawable/view_yuanxing_heibiankuang" />
+
+                    <View
+                        android:id="@+id/view_xia"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/view_yuanxing_heibiankuang" />
+
+                    <View
+                        android:layout_width="1.5dip"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/view_xia"
+                        android:layout_below="@id/view_shang"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/text_shenhei" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip" >
+
+                <com.femto.shipper.view.SyListView
+                    android:id="@+id/add_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </com.femto.shipper.view.SyListView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/text_gray1" />
+
+            <RelativeLayout
+                android:id="@+id/rela_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip" >
+
+                <ImageView
+                    android:id="@+id/img_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/qcgs" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dip"
+                    android:layout_toRightOf="@id/img_state"
+                    android:text="额外要求" />
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dip"
+                    android:src="@drawable/home_add" />
+
+                <com.femto.shipper.view.SyListView
+                    android:id="@+id/ewai_Listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_state"
+                    android:layout_marginLeft="19dip" >
+                </com.femto.shipper.view.SyListView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/text_gray1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="预估运费"
+                    android:textColor="@color/text_gray1" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/text_gray1" />
+
+            <RelativeLayout
+                android:id="@+id/rela_chexing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip" >
+
+                <ImageView
+                    android:id="@+id/img_cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/hzb" />
+
+                <TextView
+                    android:id="@+id/text_car_leixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/img_cc"
+                    android:text="选择车型"
+                    android:textColor="@color/text_gray1" />
+
+                <TextView
+                    android:id="@+id/text_car_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/line_rela_bg_yuanjiao"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:paddingTop="5dip"
+                    android:text="0部" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="80dip" >
+
+                <Button
+                    android:id="@+id/btn_denglu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/button_land"
+                    android:text="马上用车"
+                    android:textColor="@color/baise"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:src="@drawable/youjiantou_bai" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

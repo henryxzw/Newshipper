@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/hongse"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="取消订单"
+            android:textColor="@color/baise"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/dandan_gray"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用车服务已取消"
+            android:textColor="@color/text_shenhei"
+            android:textSize="16dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="我们想了解您取消的原因,以便改进服务质量"
+            android:textColor="@color/text_gray2" />
+
+        <RelativeLayout
+            android:id="@+id/rela_xiugai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip" >
+
+            <ImageView
+                android:id="@+id/img_yuan1"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:src="@drawable/process_unselect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_yuan1"
+                android:text="需要重新修改预订信息"
+                android:textColor="@color/text_shenhei"
+                android:textSize="16dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                     android:id="@+id/rela_buding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip" >
+
+            <ImageView
+                android:id="@+id/img_yuan2"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:src="@drawable/process_unselect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_yuan2"
+                android:text="出行计划有变,不订了"
+                android:textColor="@color/text_shenhei"
+                android:textSize="16dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                    android:id="@+id/rela_buman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip" >
+
+            <ImageView
+                android:id="@+id/img_yuan3"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:src="@drawable/process_unselect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_yuan3"
+                android:text="司机双约,我很不满"
+                android:textColor="@color/text_shenhei"
+                android:textSize="16dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/rela_qita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip" >
+
+            <ImageView
+                android:id="@+id/img_yuan4"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:src="@drawable/process_unselect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_yuan4"
+                android:text="其他:"
+                android:textColor="@color/text_shenhei"
+                android:textSize="16dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:text="*如果司机已在送货路上需收取回程费"
+        android:textColor="@color/hongse" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip" >
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dip"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_land"
+            android:text="提交"
+            android:textColor="@color/baise"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_quxiao"
+            android:layout_width="0dip"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_land"
+            android:text="关闭"
+            android:textColor="@color/baise"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

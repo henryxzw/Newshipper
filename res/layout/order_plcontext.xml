@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="取消运输"
+            android:textColor="@color/heise"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dian" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/OrderD_zhuangtai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yhzt_yjd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="感谢您使用速步货运！"
+                        android:textColor="@color/huise"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="请反馈取消订单原因，我们将努力改进！"
+                        android:textColor="@color/huise"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/orderD_xuanzhe1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/qxys_k1"
+                        android:gravity="center_vertical"
+                        android:text="       我选着其他物流方式"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/orderD_xuanzhe2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/qxys_k2"
+                        android:gravity="center_vertical"
+                        android:text="       客户取消订单，不需要用车了"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/dian" />
+
+                    <TextView
+                        android:id="@+id/orderD_xuanzhe3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/qxys_k2"
+                        android:gravity="center_vertical"
+                        android:text="       司机告诉我要等很久"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@drawable/dian" />
+
+                    <TextView
+                        android:id="@+id/orderD_xuanzhe4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/qxys_k3"
+                        android:gravity="center_vertical"
+                        android:text="       司机无法装货(堵车，事故等原因)"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/orderD_shuru"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="15dip"
+                    android:background="@drawable/line_rela_bg_wuyuanjiao"
+                    android:gravity="left|top"
+                    android:hint="还有什么建议，这里告诉我们吧"
+                    android:padding="5dp"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/orderD_tijiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  	android:layout_margin="16dp"
+                    android:background="@drawable/next"
+                    android:text="确认"
+                    android:textColor="@color/baise" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

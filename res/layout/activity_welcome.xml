@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图片查看"
+            android:textColor="@color/heise"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rela_title"
+        android:background="@color/heise"
+        android:orientation="vertical" >
+
+        <com.femto.shipper.image.ScaleView
+            android:id="@+id/imageshow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/zwtp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/my_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rela_title"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rela_top"
+                android:layout_width="match_parent"
+                android:layout_height="140dip"
+                android:background="@drawable/grbj"
+                android:gravity="center" >
+
+                <RelativeLayout
+                    android:id="@+id/rela_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+                </RelativeLayout>
+
+                <com.femto.shipper.view.CircleImageView
+                    android:id="@+id/my_img_touxiang"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/morentouxiang" >
+                </com.femto.shipper.view.CircleImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rela_top"
+                android:layout_marginTop="2dip"
+                android:background="@color/baise" >
+
+                <RelativeLayout
+                    android:id="@+id/my_chedui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/sij" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan"
+                        android:text="我的车队" />
+
+                    <TextView
+                        android:id="@+id/my_chedui_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/imageView1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="0人"
+                        android:textColor="@color/hongse" />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_luxian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_chedui"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/luxian" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@id/img_dingdan1"
+                        android:text="我的路线" />
+
+                    <TextView
+                        android:id="@+id/my_luxian_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="0条"
+                        android:textColor="@color/hongse" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan1"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_xiaoxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_luxian"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/xiaoxi" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:layout_toRightOf="@id/img_dingdan2"
+                        android:text="我的消息" />
+
+                    <TextView
+                        android:id="@+id/xiaoxi_count"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignRight="@+id/imageView3"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/unread_count_bg"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@color/baise" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan2"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/text_dian2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/my_xiaoxi"
+                    android:background="@color/qianhuise" />
+
+                <View
+                    android:id="@+id/text_dian3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/text_dian2"
+                    android:background="@drawable/dian" />
+
+                <RelativeLayout
+                    android:id="@+id/my_fapiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_dian3"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/fapiao" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan3"
+                        android:text="发票" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan3"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_dikojuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_fapiao"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/dikouquan" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan4"
+                        android:text="抵扣卷" />
+
+                    <TextView
+                        android:id="@+id/my_dikojuan_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/imageView5"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="0张"
+                        android:textColor="@color/hongse" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan4"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_jizhangbeng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_dikojuan"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/jizhangben" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan5"
+                        android:text="记账本" />
+
+                    <TextView
+                        android:id="@+id/text_order_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/imageView6"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="支出及收入明细"
+                        android:textColor="@color/huise"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan5"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_zhifu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_jizhangbeng"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/zhifu" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan6"
+                        android:text="支付" />
+
+                    <TextView
+                        android:id="@+id/text_order_number1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/imageView7"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="更多快捷支付"
+                        android:textColor="@color/huise"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan6"
+                        android:layout_marginTop="33dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/text_dian4"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/my_zhifu"
+                    android:background="@color/qianhuise" />
+
+                <View
+                    android:id="@+id/text_dian5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/text_dian4"
+                    android:background="@drawable/dian" />
+
+                <RelativeLayout
+                    android:id="@+id/my_bangzhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_dian5"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/help" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan7"
+                        android:text="帮助" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan7"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_bangzhu"
+                    android:layout_marginTop="2dip" >
+
+                    <ImageView
+                        android:id="@+id/img_dingdan8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/setting" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_dingdan8"
+                        android:text="设置" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrows_right" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/img_dingdan8"
+                        android:layout_marginTop="32dip"
+                        android:background="@drawable/dian" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

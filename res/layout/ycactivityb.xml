@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ycbrla"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/backa"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="服务细节"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            tools:ignore="SpUsage,HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ycblla"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ycbrla"
+        android:background="@drawable/no2"
+        tools:ignore="Orientation,ObsoleteLayoutParam" />
+
+    <ScrollView
+        android:id="@+id/ycbscrva"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ycblla"
+        android:scrollbars="none"
+        tools:ignore="ScrollViewCount" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ycbrlb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:ignore="UselessLeaf" >
+
+                <ImageView
+                    android:id="@+id/ycbimv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/lianxiren"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/ycbtva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ycbimv"
+                    android:text="负责人"
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/ycbtvb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ycbtva"
+                    android:text="("
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/ycbtvc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ycbtvb"
+                    android:text="本人"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/ycbtvd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/ycbtvc"
+                    android:text="13030303030"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/ycbtve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ycbtvd"
+                    android:text=")"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#EEEEEE" />
+
+            <RelativeLayout
+                android:id="@+id/ycbrlc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/ycbhuoiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/huo"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/ycbhuotva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ycbhuoiv"
+                    android:text="选择货物属性及包装"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/yvbhuotvb"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ycbhuoiv"
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/yvbhuotvc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/yvbhuotvb"
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:src="@drawable/jiantou"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#EEEEEE" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                tools:ignore="UselessLeaf" >
+
+                <RelativeLayout
+                    android:id="@+id/ycbshrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/ycbshiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="65dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/ycbshtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/ycbshiv"
+                        android:text="上货"
+                        android:textColor="#AEAEAE"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ycbxhrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/ycbshrl" >
+
+                    <TextView
+                        android:id="@+id/ycbxhtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="65dp"
+                        android:text="下货"
+                        android:textColor="#AEAEAE"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/ycbxhiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@id/ycbxhtv"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                tools:ignore="UselessLeaf" >
+
+                <RelativeLayout
+                    android:id="@+id/ycbgcrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/ycbgciv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="65dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/ycbgctv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/ycbgciv"
+                        android:text="跟车"
+                        android:textColor="#AEAEAE"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ycbslrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ycbgcrl" >
+
+                    <TextView
+                        android:id="@+id/ycbsltv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="65dp"
+                        android:layout_marginTop="5dp"
+                        android:text="上楼"
+                        android:textColor="#AEAEAE"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/ycbsliv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@id/ycbsltv"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#EEEEEE" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/ycbbztv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注"
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/ycbbztv"
+                    android:text="(选填)"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/ycbbzet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff"
+                android:hint="例如：货物尺寸、体积、重量、搬运注意事项"
+                android:maxLength="100"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#EEEEEE" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/ycbhezptv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="货物照片"
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/ycbhezptv"
+                    android:text="(选填)"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                tools:ignore="UselessLeaf" >
+
+                <GridView
+                    android:id="@+id/ycbgv"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    tools:ignore="NestedScrolling" >
+                </GridView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ycbbtnxyba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/next"
+        android:text="下一步"
+        android:textColor="#ffffff"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

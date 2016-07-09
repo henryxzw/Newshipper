@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="20dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="5dip" >
+
+        <ImageView
+            android:id="@+id/img_touxiang"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/img_touxiang"
+            android:text="谢发增" />
+
+        <TextView
+            android:id="@+id/text_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_name"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@id/img_touxiang"
+            android:text="轻货" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_name"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@id/text_type"
+            android:text="粤AW0Z34"
+            android:textColor="@color/text_gray1" />
+
+        <TextView
+            android:id="@+id/text_juli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_type"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@id/img_touxiang"
+            android:text="距您0.148公里" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_type"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@id/text_juli"
+            android:text="(1时2分钟前)"
+            android:textColor="@color/text_gray1" />
+
+        <RatingBar
+            android:id="@+id/item_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_below="@id/text_juli"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/img_touxiang"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/ratingbar_style"
+            android:rating="5"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_pingjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_juli"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/item_rating"
+            android:background="@drawable/line_rela_bg_huangse"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:text="5.0"
+            android:textColor="@color/baise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_juli"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/text_pingjia"
+            android:text="0单" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/text_pingjia"
+            android:background="@drawable/line_rela_bg_lvse"
+            android:paddingBottom="4dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="4dip"
+            android:text="呼车"
+            android:textColor="@color/baise" />
+    </RelativeLayout>
+
+</RelativeLayout>

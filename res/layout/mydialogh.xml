@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/hesxtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="#ffffff"
+            android:text="货物属性"
+            android:textColor="#AEAEAE"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <com.femto.shipper.activityab.WheelView
+            android:id="@+id/mypaintahwsxxz"
+            android:layout_width="120dp"
+            android:layout_height="210dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/hesxtv"
+            android:background="#ffffff" />
+
+        <TextView
+            android:id="@+id/bzzltv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mypaintahwsxxz"
+            android:background="#ffffff"
+            android:text="包装种类"
+            android:textColor="#AEAEAE"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <com.femto.shipper.activityab.WheelView
+            android:id="@+id/mypaintabzzlxz"
+            android:layout_width="100dp"
+            android:layout_height="210dp"
+            android:layout_toRightOf="@id/bzzltv"
+            android:background="#EDEDED" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="90dp"
+            android:background="#A1A1A1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="120dp"
+            android:background="#A1A1A1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A1A1A1" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mdlhbtnqx"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:text="取消"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#A1A1A1" />
+
+        <Button
+            android:id="@+id/mdlhbtn"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:text="确定"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+</LinearLayout>

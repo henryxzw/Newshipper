@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="170dp" >
+
+    <RelativeLayout
+        android:id="@+id/mydialoglrla"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="#DE4948" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#DE4948"
+            android:text="支付方式"
+            android:textColor="#ffffff"
+            android:textSize="23dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mydialogllla"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/mydialoglrla"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/zfb"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="支付宝"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mydialoglllb"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/mydialoglrla"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/mydialogllla"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
+            android:id="@+id/yj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="月结账户"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mydialoglllc"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/mydialoglrla"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/mydialoglllb"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/yinlian"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="信用卡"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</RelativeLayout>

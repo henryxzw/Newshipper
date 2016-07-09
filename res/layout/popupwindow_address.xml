@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:padding="10dp" >
+
+
+        <LinearLayout
+            android:id="@+id/ll_popupMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.femto.shipper.view.XListView
+                android:id="@+id/clv_address"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="地址" />
+        </LinearLayout>
+
+</RelativeLayout>

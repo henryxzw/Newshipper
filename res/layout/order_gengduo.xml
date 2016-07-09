@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="装卸详情"
+            android:textColor="@color/heise"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/orderE_shuaxin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:text="刷新"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dian" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt1"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu1"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt1"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/huise" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt2"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu2"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt2"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/huise" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt3"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu3"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt3"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/huise" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt4"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu4"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt4"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA4"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB4"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC4"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD4"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/huise" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt5"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu5"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt5"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA5"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB5"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC5"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD5"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/huise" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt6"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu6"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt6"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA6"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB6"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC6"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD6"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/huise" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/orderE_ll7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/rtlt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llt7"
+                        android:layout_marginLeft="10dp" >
+
+                        <com.femto.shipper.view.YuanJiaoImageView
+                            android:id="@+id/image_tu7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/se" />
+                        <!-- 下面是一条竖线 -->
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/image_tu7"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/huise"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rtlt7"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/orderE_weizhi7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/orderE_sijname7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="司机名" />
+
+                            <TextView
+                                android:id="@+id/orderE_sijiphone7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1324222312" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderE_gaitupian7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianA7"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianB7"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianC7"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+
+                            <com.femto.shipper.view.YuanJiaoImageView
+                                android:id="@+id/orderE_tupianD7"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/zwtp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/orderE_time7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="123" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/huise" />
+
+                <LinearLayout
+                    android:id="@+id/OrderE_fankui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/zhxq_sjfk" />
+
+                    <TextView
+                        android:id="@+id/orderE_sijifankui"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="司机反馈：殴打 MG，是不是很爽呀！" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

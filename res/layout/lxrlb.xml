@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lxrlbrla"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF" >
+
+        <ImageButton
+            android:id="@+id/lxrlbibtna"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/backa"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="联系人"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <Button
+            android:id="@+id/lxrlbqrbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#FFFFFF"
+            android:text="确认"
+            android:textColor="#DE4948"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:ignore="UselessLeaf" >
+
+        <ImageView
+            android:id="@+id/ycbchiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/chenghu"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/ycbchet"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ycbchiv"
+            android:background="#ffffff"
+            android:hint="称呼"
+            android:maxLength="6"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/ycbxlla"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/ycbchet"
+            android:background="#EEEEEE"
+            tools:ignore="Orientation" />
+
+        <ImageView
+            android:id="@+id/ycbdhiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/ycbxlla"
+            android:src="@drawable/dianhuac"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/ycbdhet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ycbdhiv"
+            android:background="#ffffff"
+            android:hint="电话"
+            android:maxLength="11"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#EEEEEE" />
+
+    <RelativeLayout
+        android:id="@+id/ycbtxlrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessLeaf" >
+
+        <ImageView
+            android:id="@+id/ycbtxliv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/txl"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/ycbtxliv"
+            android:text="通讯录"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/jiantou"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#EEEEEE" />
+
+    <RelativeLayout
+        android:id="@+id/ycbtzfhrrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessLeaf" >
+
+        <TextView
+            android:id="@+id/ycbtzfhrtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="订车成功后短信通知发货人"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ImageView
+            android:id="@+id/ycbtzfhriv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="#EEEEEE"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="最近联系人"
+            android:textColor="#AEAEAE"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText,SpUsage,TooManyViews" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lxrlv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

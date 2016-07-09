@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/dkjrla"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/backa"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="抵扣券"
+            android:textSize="17dp"
+            tools:ignore="SpUsage,HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dkjlla"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/dkjrla"
+        android:background="#A1A1A1"
+        tools:ignore="Orientation" />
+
+    <RelativeLayout
+        android:id="@+id/dkjrlb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dkjlla"
+        android:background="#ffffff"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/dkjdhtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/line_rela_bg_wuyuanjiao"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text="兑换"
+            android:textSize="16dip"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <EditText
+            android:id="@+id/dkjdhmet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/dkjdhtv"
+            android:background="@drawable/line_rela_bg_wuyuanjiao"
+            android:hint="请输入兑换码"
+            android:maxLength="10"
+            android:padding="10dip"
+            android:textSize="16dip"
+            tools:ignore="HardcodedText,SpUsage" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dkjllb"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/dkjrlb"
+        android:background="#EEEEEE"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/dkjgjztv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共有0张，可节省0元，更多优惠敬请关注"
+            android:textColor="#AEAEAE"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText,SpUsage,TooManyViews" />
+
+        <TextView
+            android:id="@+id/dkjfxtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="		发现>"
+            android:textColor="#DE4141"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dkjllb"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抵扣劵:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <Spinner
+            android:id="@+id/dkjspinner"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dkjllc"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        tools:ignore="Orientation" />
+
+    <Button
+        android:id="@+id/dkjbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dkjllc"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/next"
+        android:text="确定"
+        android:textColor="#ffffff"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

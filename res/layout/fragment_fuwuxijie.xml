@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rela_lianxiren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/img_tt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/service_i" />
+
+            <TextView
+                android:id="@+id/text_lxr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/img_tt"
+                android:text="装货联系人"
+                android:textSize="17dip" />
+
+            <TextView
+                android:id="@+id/text_lianxiren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/text_lxr"
+                android:textColor="@color/text_gray2"
+                android:textSize="14dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dip"
+            android:id="@+id/rela_xiehuolianxiren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/img_rr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/service_i" />
+
+            <TextView
+                android:id="@+id/text_xiehuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/img_rr"
+                android:text="卸货联系人"
+                android:textSize="17dip" />
+
+            <TextView
+                android:id="@+id/text_xiehuolianxiren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/text_xiehuo"
+                android:textColor="@color/text_gray2"
+                
+                android:textSize="14dip" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/text_gray1" />
+
+        <RelativeLayout
+            android:id="@+id/rela_select_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip" >
+
+            <ImageView
+                android:id="@+id/img_dd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/service_cargo" />
+
+            <TextView
+                android:id="@+id/text_huowu_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/img_dd"
+                android:text="选择货物属性及包装"
+                android:textColor="@color/text_gray1"
+                android:textSize="15dip" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/text_gray1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip" >
+
+            <RelativeLayout
+                android:id="@+id/rela_shanghuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginTop="20dip" >
+
+                <ImageView
+                    android:id="@+id/img_shanghuo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/service_a" />
+
+                <TextView
+                    android:id="@+id/text_shangche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_shanghuo"
+                    android:layout_toRightOf="@id/img_shanghuo"
+                    android:text="上货"
+                    android:textColor="@color/text_gray1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_xiahuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dip"
+                android:layout_marginTop="20dip" >
+
+                <ImageView
+                    android:id="@+id/img_xiahuo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/service_b" />
+
+                <TextView
+                    android:id="@+id/text_xiahuo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_xiahuo"
+                    android:layout_toRightOf="@id/img_xiahuo"
+                    android:text="下货"
+                    android:textColor="@color/text_gray1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_genche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginTop="70dip" >
+
+                <ImageView
+                    android:id="@+id/img_genche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/service_c" />
+
+                <TextView
+                    android:id="@+id/text_genche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_genche"
+                    android:layout_toRightOf="@id/img_genche"
+                    android:text="跟车"
+                    android:textColor="@color/text_gray1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_shanglou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dip"
+                android:layout_marginTop="70dip" >
+
+                <ImageView
+                    android:id="@+id/img_shanglou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/service_d" />
+
+                <TextView
+                    android:id="@+id/text_shanglou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_shanglou"
+                    android:layout_toRightOf="@id/img_shanglou"
+                    android:text="上楼"
+                    android:textColor="@color/text_gray1" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/text_gray1" />
+
+        <RelativeLayout
+            android:id="@+id/rela_beizhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注  (可选填)"
+                android:textColor="@color/text_gray1"
+                android:textSize="17dip" />
+
+            <TextView
+                android:id="@+id/text_xt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_xt"
+                android:layout_marginTop="25dip"
+                android:text="例如: 货物尺寸、体积、重量，搬运注意事项等等"
+                android:textColor="@color/text_gray1" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/text_gray1" />
+
+        <RelativeLayout
+            android:id="@+id/rela_zhaopian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip" >
+
+            <ImageView
+                android:id="@+id/img_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@id/img_1"
+                android:text="按此上载货物照片"
+                android:textColor="@color/text_gray1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_mashangyongche"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/btn_denglu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_land"
+            android:gravity="center"
+            android:text="马上用车"
+            android:textColor="@color/baise"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/youjiantou_bai" />
+
+        <ImageView
+            android:id="@+id/img_zuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/nva_back" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_huowu"
+        android:layout_width="230dip"
+        android:layout_height="100dip"
+        android:layout_above="@id/rela_mashangyongche"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip" />
+
+</RelativeLayout>

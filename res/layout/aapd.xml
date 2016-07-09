@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/apdrla"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        tools:ignore="UselessParent" >
+
+        <TextView
+            android:id="@+id/pdtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="派单中"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            tools:ignore="SpUsage,HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/apdlla"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/apdrla"
+        android:background="#A1A1A1"
+        tools:ignore="Orientation" />
+
+    <RelativeLayout
+        android:id="@+id/rla"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/apdlla"
+        android:background="#DCDCDC" >
+
+        <com.femto.shipper.activitya.Roundimageview
+            android:id="@+id/apdiva"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/siji"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/apdtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/apdiva"
+            android:text="陈司机"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <ImageView
+            android:id="@+id/apdivb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/apdtva"
+            android:src="@drawable/kx5"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/apdtvb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apdtva"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apdiva"
+            android:text="车牌:"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/apdtvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apdtva"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apdtvb"
+            android:text="粤E"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <TextView
+            android:id="@+id/apdtvd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apdtva"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apdtvc"
+            android:text="3Q102"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#B3B3B3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rla"
+        android:background="#DCDCDC" >
+
+        <com.femto.shipper.activitya.Roundimageview
+            android:id="@+id/bpdiva"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/siji"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/bpdtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/bpdiva"
+            android:text="陈司机"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <ImageView
+            android:id="@+id/bpdivb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/bpdtva"
+            android:src="@drawable/kx5"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/bpdtvb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bpdtva"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bpdiva"
+            android:text="车牌:"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/bpdtvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bpdtva"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bpdtvb"
+            android:text="粤E"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <TextView
+            android:id="@+id/bpdtvd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bpdtva"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bpdtvc"
+            android:text="3Q102"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#B3B3B3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rlb"
+        android:background="#DCDCDC" >
+
+        <com.femto.shipper.activitya.Roundimageview
+            android:id="@+id/cpdiva"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/siji"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/cpdtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/cpdiva"
+            android:text="陈司机"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <ImageView
+            android:id="@+id/cpdivb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/cpdtva"
+            android:src="@drawable/kx5"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/cpdtvb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cpdtva"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/cpdiva"
+            android:text="车牌:"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/cpdtvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cpdtva"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/cpdtvb"
+            android:text="粤E"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <TextView
+            android:id="@+id/cpdtvd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cpdtva"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/cpdtvc"
+            android:text="3Q102"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#B3B3B3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rld"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rlc"
+        android:background="#DCDCDC" >
+
+        <com.femto.shipper.activitya.Roundimageview
+            android:id="@+id/dpdiva"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/siji"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/dpdtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/dpdiva"
+            android:text="陈司机"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <ImageView
+            android:id="@+id/dpdivb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/dpdtva"
+            android:src="@drawable/kx5"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/dpdtvb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dpdtva"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/dpdiva"
+            android:text="车牌:"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/dpdtvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dpdtva"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/dpdtvb"
+            android:text="粤E"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <TextView
+            android:id="@+id/dpdtvd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dpdtva"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/dpdtvc"
+            android:text="3Q102"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#B3B3B3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rld"
+        android:background="#DCDCDC" >
+
+        <com.femto.shipper.activitya.Roundimageview
+            android:id="@+id/epdiva"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/siji"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/epdtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/epdiva"
+            android:text="陈司机"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <ImageView
+            android:id="@+id/epdivb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/epdtva"
+            android:src="@drawable/kx5"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/epdtvb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epdtva"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/epdiva"
+            android:text="车牌:"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/epdtvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epdtva"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/epdtvb"
+            android:text="粤E"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <TextView
+            android:id="@+id/epdtvd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epdtva"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/epdtvc"
+            android:text="3Q102"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#B3B3B3" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/pdmapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rle"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pdclsltva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还有"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/pdclsltvb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="很多"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/pdclsltvc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="辆车未派,请耐心等待"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText,SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pddsjtva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在派单中,请等待"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                tools:ignore="SpUsage,HardcodedText" />
+
+            <TextView
+                android:id="@+id/pddsjtvb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="00:50"
+                android:textColor="#EC494A"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText,SpUsage" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#EDEDED"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EDEDED"
+            android:text="车型仅供参考，最终车型以实际装货车型为准"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mdldxshctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ImageView
+            android:id="@+id/mdldimva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最大载货量：  "
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/mdldtvzdzhl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="起步价格：  "
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/mdldtvqbjg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最大载重量：  "
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/mdldtvzdzzl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="超出价格：  "
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/mdldtvccjg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AEAEAE"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#A1A1A1" />
+
+    <LinearLayout
+        android:id="@+id/mdldlla"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mdlbtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#EDEDED"
+            android:text="规格尺寸"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#A1A1A1" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/dwtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:background="#ffffff"
+                android:text="吨位"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <com.femto.shipper.activityab.WheelView
+                android:id="@+id/mypaintadwxz"
+                android:layout_width="80dp"
+                android:layout_height="160dp"
+                android:layout_toRightOf="@id/dwtv"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/cctv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/mypaintadwxz"
+                android:background="#ffffff"
+                android:text="尺寸"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <com.femto.shipper.activityab.WheelView
+                android:id="@+id/mypaintaccxz"
+                android:layout_width="190dp"
+                android:layout_height="160dp"
+                android:layout_toRightOf="@id/cctv"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="60dp"
+                android:background="#A1A1A1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="100dp"
+                android:background="#A1A1A1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mdldllb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EDEDED"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#EDEDED"
+                android:text="现有"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/tvclsl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#EDEDED"
+                android:textColor="#DE4948"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#EDEDED"
+                android:text="辆车可提供服务"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#A1A1A1" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/tvwxy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:background="#ffffff"
+                android:text="我需要"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <com.femto.shipper.activityab.WheelView
+                android:id="@+id/mypaintaclsla"
+                android:layout_width="80dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="60dp"
+                android:background="#A1A1A1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="100dp"
+                android:background="#A1A1A1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mdldbtnqx"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="#DE4948"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+        <Button
+            android:id="@+id/mdldbtn"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="#DE4948"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            tools:ignore="SpUsage,HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>

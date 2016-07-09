@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/mdlbtv"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="选择时间"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#A1A1A1" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <com.femto.shipper.activityab.WheelView
+            android:id="@+id/minute_pva"
+            android:layout_width="180dp"
+            android:layout_height="260dp" />
+
+        <com.femto.shipper.activityab.WheelView
+            android:id="@+id/minute_pv"
+            android:layout_width="80dp"
+            android:layout_height="260dp"
+            android:layout_toRightOf="@id/minute_pva" />
+
+        <TextView
+            android:id="@+id/timedhtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/minute_pv"
+            android:text=":"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <com.femto.shipper.activityab.WheelView
+            android:id="@+id/second_pv"
+            android:layout_width="80dp"
+            android:layout_height="260dp"
+            android:layout_toRightOf="@id/timedhtva" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="110dp"
+            android:background="#A1A1A1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="150dp"
+            android:background="#A1A1A1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A1A1A1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mdlbtna"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:background="#ffffff"
+            android:text="取消"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage,ButtonStyle" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#A1A1A1" />
+
+        <Button
+            android:id="@+id/mdlbtnb"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:background="#ffffff"
+            android:text="确认"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+    </LinearLayout>
+
+</LinearLayout>

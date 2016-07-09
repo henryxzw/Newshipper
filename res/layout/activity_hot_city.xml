@@ -1,0 +1,225 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/baise"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="服务城市"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/rela_title"
+        android:background="@drawable/search_bg" >
+
+        <EditText
+            android:id="@+id/input_search_query"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/search_puin"
+            android:hint="请输入城市名称"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingLeft="5dip"
+            android:paddingRight="25dip"
+            android:singleLine="true"
+            android:textSize="15dip" />
+
+        <ImageButton
+            android:id="@+id/button_search"
+            style="@android:style/Widget.Button.Inset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/icon_search"
+            android:contentDescription="Search..."
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line_remen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBarContainer"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:background="@color/title_huise"
+            android:paddingBottom="4dip"
+            android:paddingTop="4dip"
+            android:text="开通城市"
+            android:textColor="@color/text_gray2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/text_beijing"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="广州" />
+
+            <TextView
+                android:id="@+id/text_shanghai"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="东莞" />
+
+            <TextView
+                android:id="@+id/text_guangzhou"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="深圳" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/text_shenzhen"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="中山" />
+
+            <TextView
+                android:id="@+id/text_hangzhou"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="江门" />
+
+            <TextView
+                android:id="@+id/text_chengdu"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="珠海" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/text_huizhou"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="惠州" />
+
+            <TextView
+                android:id="@+id/text_fosan"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="佛山" />
+
+            <TextView
+                android:id="@+id/text_gengduo"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/line_rela_bg_wuyuanjiao"
+                android:gravity="center"
+                android:padding="5dip"
+                android:visibility="invisible"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/line_remen"
+        android:layout_marginTop="5dip" >
+
+        <com.femto.shipper.city.ContactListViewImpl
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/dian"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@color/hongse"
+            android:smoothScrollbar="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

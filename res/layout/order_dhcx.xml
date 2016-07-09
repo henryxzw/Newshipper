@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <com.femto.shipper.fragment.XListView
+        android:id="@+id/Order_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/myorderll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Order_listView"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/myordertv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:text="您已无更多订单"
+            android:textColor="#AEAEAE"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="还等什么，马上使用速步订车吧！"
+            android:textColor="#AEAEAE"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/myordermsycbtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rela_yuanxing_style"
+            android:text="马上用车"
+            android:textColor="#AEAEAE"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</RelativeLayout>

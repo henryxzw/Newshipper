@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/hongse"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="额外要求"
+            android:textColor="@color/baise"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:background="@color/dandan_gray"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/line_rela_bg_yuanjiao_beijinghui"
+            android:padding="5dip" >
+
+            <View
+                android:id="@+id/view_select1"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/text_yuandian" />
+
+            <ImageView
+                android:id="@+id/img_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/view_select1"
+                android:src="@drawable/imggs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/img_1"
+                android:text="全程高速" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/line_rela_bg_yuanjiao_beijinghui"
+            android:padding="5dip" >
+
+            <View
+                android:id="@+id/view_select2"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/text_yuandian" />
+
+            <ImageView
+                android:id="@+id/img_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/view_select2"
+                android:src="@drawable/imgcz" />
+
+            <TextView
+                android:id="@+id/text_leixing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/img_2"
+                android:text="借车仔 / 板车" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/text_leixing"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/text_leixing"
+                android:text="-每部+¥50"
+                android:textSize="10dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/line_rela_bg_yuanjiao_beijinghui"
+            android:padding="5dip" >
+
+            <View
+                android:id="@+id/view_select3"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/text_yuandian" />
+
+            <ImageView
+                android:id="@+id/img_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/view_select3"
+                android:src="@drawable/imgby" />
+
+            <TextView
+                android:id="@+id/text_banyun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/img_3"
+                android:text="搬运" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/text_banyun"
+                android:text="-与司机议价"
+                android:textSize="10dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/line_rela_bg_yuanjiao_beijinghui"
+            android:padding="5dip" >
+
+            <View
+                android:id="@+id/view_select4"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/text_yuandian" />
+
+            <ImageView
+                android:id="@+id/img_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/view_select4"
+                android:src="@drawable/imgntc" />
+
+            <TextView
+                android:id="@+id/text_nitouche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/img_4"
+                android:text="泥头车/建筑废料" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/text_nitouche"
+                android:text="-与司机议价"
+                android:textSize="10dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_queding"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:visibility="invisible"
+        android:background="@drawable/button_land"
+        android:text="确定"
+        android:textColor="@color/baise"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="附近车辆"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rela_title"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:layout_below="@id/rela_title"
+        android:layout_margin="15dip"
+        android:background="@color/baise" >
+
+        <View
+            android:id="@+id/view_zhongjian"
+            android:layout_width="0.5dip"
+            android:layout_height="35dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@color/text_gray1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/view_zhongjian" >
+
+            <TextView
+                android:id="@+id/text_car_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:text="5km" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_car_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dip"
+                android:text="最近"
+                android:textColor="@color/text_gray1"
+                android:textSize="10dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/view_zhongjian" >
+
+            <TextView
+                android:id="@+id/text_car_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:text="0辆" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_car_number"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dip"
+                android:text="附近"
+                android:textColor="@color/text_gray1"
+                android:textSize="10dip" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@id/view_zhongjian"
+            android:layout_marginTop="5dip"
+            android:background="@color/text_gray1" />
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_find"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:background="@drawable/rela_yuanxing_style" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="马上\n用车"
+            android:textColor="@color/text_shenhei"
+            android:textSize="20dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

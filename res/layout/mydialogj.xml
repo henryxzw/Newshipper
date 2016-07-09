@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="上楼"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessLeaf" >
+
+        <CheckBox
+            android:id="@+id/mydlogjcb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/mydlgjtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/mydlogjcb"
+            android:text="电梯"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+
+        <EditText
+            android:id="@+id/mydlogjet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/mydlgjtva"
+            android:background="@drawable/gcrs"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            tools:ignore="HardcodedText,ButtonStyle,TextFields,LabelFor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/mydlogjet"
+            android:text="层"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="#A1A1A1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/mydlgjbtna"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:text="取消"
+            tools:ignore="HardcodedText,ButtonStyle" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#A1A1A1" />
+
+        <Button
+            android:id="@+id/mydlgjbtnb"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:text="确认"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>

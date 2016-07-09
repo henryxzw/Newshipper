@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="15dip"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dandan_gray"
+        android:paddingBottom="20dip" >
+
+        <ImageView
+            android:id="@+id/img_duihao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:src="@drawable/register_lvse" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_duihao"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dip"
+            android:text="您已注册成功" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rela"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="150dip"
+        android:background="@drawable/button_land"
+        android:text="开始使用"
+        android:textColor="@color/baise"
+        android:textSize="16sp" />
+
+</RelativeLayout>

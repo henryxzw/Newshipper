@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical" >
+
+        <include
+            android:id="@+id/left"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dian" />
+
+    <EditText
+        android:id="@+id/editext_yijian"
+        android:layout_width="match_parent"
+        android:layout_height="320dip"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:background="@drawable/line_rela_bg_wuyuanjiao"
+        android:gravity="left|top"
+        android:hint="请输入您对我们服务的意见" />
+
+    <Button
+        android:id="@+id/btn_tijiao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dip"
+        android:background="@drawable/button_land"
+        android:text="提交"
+        android:textColor="@color/baise"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/xcrla"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/backa"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的相册"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            tools:ignore="SpUsage,HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/xclla"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/xcrla"
+        android:background="#A1A1A1"
+        tools:ignore="Orientation" />
+
+    <RelativeLayout
+        android:id="@+id/xcrlb"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:id="@+id/xcllb"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="#A1A1A1"
+            tools:ignore="Orientation" />
+
+        <TextView
+            android:id="@+id/xcqx"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/xcllb"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/xcqd"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/xcllb"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/xcgv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/xcrlb"
+        android:layout_below="@id/xclla"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp" />
+
+    <TextView
+        android:id="@+id/xcmzptv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="亲,您的相册中没有图片哦！"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

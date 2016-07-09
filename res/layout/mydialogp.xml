@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf,UselessParent,UseCompoundDrawables" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="派单失败！"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mydialogpbtna"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/morenn"
+            android:text="取消订单"
+            android:textColor="#EC494A"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage,ButtonStyle" />
+
+        <Button
+            android:id="@+id/mydialogpbtnb"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/kuang"
+            android:text="重新派单"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage,ButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>

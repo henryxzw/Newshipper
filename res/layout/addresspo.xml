@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/addpoarla"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/backa"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="地点信息"
+            android:textSize="17dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#A1A1A1" />
+
+    <TextView
+        android:id="@+id/addpatva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/kuang_dd"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="选择地址"
+        android:textColor="#848282"
+        android:textSize="19dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <com.femto.shipper.activitya.Editzdyi
+        android:id="@+id/addpaetb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/kuang_dd"
+        android:drawablePadding="15dp"
+        android:drawableRight="@drawable/qk"
+        android:gravity="center_vertical"
+        android:hint="联系人(选填)"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="19dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <com.femto.shipper.activitya.Editzdyi
+        android:id="@+id/addpaetc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/kuang_dd"
+        android:drawableRight="@drawable/qk"
+        android:gravity="center_vertical"
+        android:hint="联系电话(选填)"
+        android:inputType="number"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="19dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/addpabtna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/next"
+        android:text="确定"
+        android:textColor="#ffffff"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

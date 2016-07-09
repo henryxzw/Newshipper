@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/baise" />
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:ignore="ObsoleteLayoutParam" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/pingxing"
+            android:text="运单号："
+            android:textColor="#696969"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/myyundanhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:textColor="#696969"
+            android:textSize="15dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="190dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/textView2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/pingxing"
+            android:background="@color/huise"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/myyundandi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="10dp"
+            android:textColor="#696969"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/myyundandi"
+            android:layout_alignTop="@+id/myyundandi"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/myyundandi"
+            android:text="车牌:"
+            android:textColor="#696969"
+            android:textSize="15dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/myyundancar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/myyundandi"
+            android:layout_alignTop="@+id/myyundandi"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/textView5"
+            android:textColor="#696969"
+            android:textSize="15dp"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@+id/tuoxiang"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/morentouxiang"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/myyundancarstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:textColor="@color/red"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@+id/pingxing"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_alignBottom="@+id/myyundandi"
+            android:layout_alignLeft="@+id/tuoxiang"
+            android:src="@drawable/x3"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+</LinearLayout>

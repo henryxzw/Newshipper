@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.femto.shipper"
+    android:installLocation="auto"
+    android:versionCode="39"
+    android:versionName="1.3.9" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="com.femto.shipper.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.femto.shipper.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 添加系统权限，来支持对LBS硬件的访问 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".application.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name="com.femto.shipper.activitya.Welcomea"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activity.AlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.AlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Aapd"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Internetfx"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Wdlxadd"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Dkj"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Sbjjr"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Baidumap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Registera"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Registerb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.YiDiDengluActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Ycactivitya"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Ycactivityb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Picturezs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Lxrlb"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Qrddactivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.LanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activitya.Intentfwxy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Addressa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Intentjfbz"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Addresspo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Addressposition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Dutu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activitya.Historyjl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.KaiPiao_ZengZhi"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Web_INTENT"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.JiZhangBenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.KaiPiao_Address"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.My_SubmitPwm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.My_LuXian"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.BaiduSoSo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activity.My_CheDuiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Order_plContext"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Order_op_ddxq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Order_pinjia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Order_gengduo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Order_op_ydxq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.OrderPropertyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Order_twoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.SiJi_informationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.PaiDanChengGong"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.FuWuXieYi_SPVAN"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.MyRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.MyInterspaceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.femto.shipper.activity.ImageShow"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.ImageShowa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.MyInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.ChangePswActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.CancelOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.AddCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.InvoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.KaiPiaoXinXiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.SelectFuKuanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.ImmediatelyCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.EWaiYaoQiuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.HotCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.FoundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.CollectionDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.Welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.BaiDuActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.BaiduMapSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.MulCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.YiJianFanKuiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.KaiPiaoJiLuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.femto.shipper.activity.TaskFailureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 支付宝页面 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- 环信 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.CallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.OfflinePushNickActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.PickContactNoCheckboxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.RobotsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.chatuidemo.activity.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <!-- 登陆 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.AddContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible" >
+        </activity>
+        <!-- 群组详情 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组列表 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ChatRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 聊天室详情 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ChatRoomDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 新建群组 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.NewGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ExitGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" >
+        </activity>
+        <!-- 群组选人 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupPickContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 地图 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.BaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.NewFriendsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 自定义的alertdialog -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ShowBigImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 下载文件 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ShowNormalFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 黑名单 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.BlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.PublicGroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.PublicChatRoomsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 语音通话 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.VoiceCallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style" >
+        </activity>
+        <!-- 视频通话 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群聊简单信息 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupSimpleDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组黑名单用户列表 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupBlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.PublicGroupsSeachActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- 选择视频 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- upload error log -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.DiagnoseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 百度地图开发配置 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="oBLGTyR0ziaCp42F0qetujaKFG8jXcwm" />
+        <!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DD279b2a90afdf0ae7a3796787a0742e" />
+        -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- gcm start -->
+        <receiver
+            android:name="com.easemob.chat.EMGCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.easemob.chatuidemo" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.easemob.chat.EMGCMListenerService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name="com.easemob.chatuidemo.receiver.GCMPushBroadCast"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.easemob.sdk.push" />
+
+                <category android:name="com.easemob.chatuidemo" />
+            </intent-filter>
+        </receiver>
+        <!-- gcm end -->
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="spvan#spvan" />
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.easemob.chat.EMChatService" />
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.easemob.chat.EMMonitorReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 极光推送 -->
+        <receiver
+            android:name="com.femto.shipper.activitya.Aapdbroad"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.femto.shipper" />
+            </intent-filter>
+        </receiver>
+        <!--
+        <receiver
+            android:name="com.femto.shipper.activitya.Allbroad"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.femto.shipper" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.femto.shipper" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.femto.shipper" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.femto.shipper" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.femto.shipper.broadcastreception.MyReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.femto.shipper" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="cf8362d62831b4c39d5bda51" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- ////////////////////友盟更新和集成文档//////////////////////////// -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56712b0b67e58e9e76003857" > <!-- 值来自开发者平台取得的AppKey -->
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

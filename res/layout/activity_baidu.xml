@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/baise"
+        android:gravity="center_vertical"
+        android:visibility="visible" >
+
+        <include layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="速步物流"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_cirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:text="取消运输"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rela_title"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rela_title"
+        android:background="#88ffffff"
+        android:gravity="center"
+        android:padding="10dip" />
+
+    <RelativeLayout
+        android:id="@+id/rela_siji_xinxi"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/baise" >
+
+        <ImageView
+            android:id="@+id/img_touxiang"
+            android:layout_width="60dip"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/text_siji_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/img_touxiang"
+            android:text="习近平" />
+
+        <ImageView
+            android:id="@+id/img_pinfen"
+            android:layout_width="17dip"
+            android:layout_height="17dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/text_siji_name"
+            android:src="@drawable/star1" />
+
+        <TextView
+            android:id="@+id/tex_pinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/img_pinfen"
+            android:text="5.0" />
+
+        <TextView
+            android:id="@+id/text_chepaihao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/tex_pinf"
+            android:text="车牌号1234" />
+
+        <TextView
+            android:id="@+id/text_huowu_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_siji_name"
+            android:layout_toRightOf="@id/img_touxiang"
+            android:text="货物类型 啊啊啊啊啊a" />
+
+        <LinearLayout
+            android:layout_width="240dip"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text_huowu_type"
+            android:layout_toRightOf="@id/img_touxiang" >
+
+            <ImageView
+                android:id="@+id/img_1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/img_2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/img_3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

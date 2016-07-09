@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="#EC494A"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EC494A"
+            android:text="额外要求"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlqcgs"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/mdaimvqcgs"
+            style="@style/ewyqimaa"
+            android:src="@drawable/gaosu1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mdatvqcgs"
+            style="@style/ewyqtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全程高速"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/mdaimvqcgsga"
+            style="@style/ewyqimab"
+            android:src="@drawable/goua"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlhgjg"
+        style="@style/ewyqrla" >
+
+        <ImageView
+            android:id="@+id/mdaimvhgjg"
+            style="@style/ewyqimaa"
+            android:src="@drawable/haiguan1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mdatvhgjg"
+            style="@style/ewyqtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="海关监管"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/mdaimvhgjgga"
+            style="@style/ewyqimab"
+            android:src="@drawable/goua"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlbswl"
+        style="@style/ewyqrla" >
+
+        <ImageView
+            android:id="@+id/mdaimvbswl"
+            style="@style/ewyqimaa"
+            android:src="@drawable/baosui"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mdatvbswl"
+            style="@style/ewyqtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保税物流"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/mdaimvbswlga"
+            style="@style/ewyqimab"
+            android:src="@drawable/goua"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#A1A1A1" />
+
+    <RelativeLayout
+        android:id="@+id/rldwb"
+        style="@style/ewyqrla" >
+
+        <ImageView
+            android:id="@+id/mdaimvdwb"
+            style="@style/ewyqimaa"
+            android:src="@drawable/weiban1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mdatvdwb"
+            style="@style/ewyqtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="带尾板"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/mdaimvdwbga"
+            style="@style/ewyqimab"
+            android:src="@drawable/goua"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rldcm"
+        style="@style/ewyqrla" >
+
+        <ImageView
+            android:id="@+id/mdaimvdcm"
+            style="@style/ewyqimaa"
+            android:src="@drawable/cenmen1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mdatvdcm"
+            style="@style/ewyqtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单侧门"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/mdaimvdcmga"
+            style="@style/ewyqimab"
+            android:src="@drawable/goua"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlscm"
+        style="@style/ewyqrla" >
+
+        <ImageView
+            android:id="@+id/mdaimvscm"
+            style="@style/ewyqimaa"
+            android:src="@drawable/cemen1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mdatvscm"
+            style="@style/ewyqtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="双侧门"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/mdaimvscmga"
+            style="@style/ewyqimab"
+            android:src="@drawable/goua"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mdabtnab"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#EC494A"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            tools:ignore="SpUsage,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+        <Button
+            android:id="@+id/mdabtna"
+            android:layout_width="159dp"
+            android:layout_height="50dp"
+            android:background="#EC494A"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            tools:ignore="SpUsage,HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>

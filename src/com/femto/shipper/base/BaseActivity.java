@@ -2,15 +2,6 @@ package com.femto.shipper.base;
 
 import java.util.HashMap;
 
-import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.widget.Toast;
 import com.femto.shipper.R;
 import com.femto.shipper.application.DemoApplication;
 import com.femto.shipper.bean.StatusBean;
@@ -22,6 +13,16 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nostra13.universalimageloader.core.ImageLoader;
+
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.widget.Toast;
 
 public class BaseActivity extends FragmentActivity {
 
@@ -49,6 +50,8 @@ public class BaseActivity extends FragmentActivity {
 		this.registerReceiver(myservice, filtera);
 		super.onResume();
 	}
+	
+	
 
 	class Myservice extends BroadcastReceiver {
 
@@ -152,7 +155,6 @@ public class BaseActivity extends FragmentActivity {
 		long time = System.currentTimeMillis();
 		long timeD = time - lastClickTime;
 		if (0 < timeD && timeD < 500) {
-
 			return true;
 		}
 		lastClickTime = time;

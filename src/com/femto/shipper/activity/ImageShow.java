@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.femto.shipper.R;
 import com.femto.shipper.base.BaseActivity;
 import com.femto.shipper.utils.Net;
+import com.femto.shipper.utils.ToolUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class ImageShow extends BaseActivity {
@@ -17,8 +18,8 @@ public class ImageShow extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome);
 		imageshow = (ImageView) findViewById(R.id.imageshow);
-		ImageLoader.getInstance().displayImage(
-				Net.PICURL + getIntent().getStringExtra("image"), imageshow,
+		ImageLoader.getInstance().displayImage(ToolUtils.DownloadDemo(getIntent().getStringExtra("image"))
+				 , imageshow,
 				application.options);
 		findViewById(R.id.left).setOnClickListener(new View.OnClickListener() {
 			@Override

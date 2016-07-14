@@ -161,52 +161,58 @@ public class SiJi_informationActivity extends BaseActivity implements
 					siji_hpn.setText(SiJiXinXiBean.goods_comment);
 					siji_jl.setText(SiJiXinXiBean.driving_age);
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
-						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.car_picture1,
+						ImageLoader.getInstance().displayImage(ToolUtils
+								.DownloadDemo(SiJiXinXiBean.car_picture1),
 								siji_name1, application.options);
 						image1 = SiJiXinXiBean.car_picture1;
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.car_picture2,
+								ToolUtils
+								.DownloadDemo(SiJiXinXiBean.car_picture2),
 								siji_name2, application.options);
 						image2 = SiJiXinXiBean.car_picture2;
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.car_picture3,
+								ToolUtils
+								.DownloadDemo(SiJiXinXiBean.car_picture3),
 								siji_name3, application.options);
 						image3 = SiJiXinXiBean.car_picture3;
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.car_picture4,
+								ToolUtils
+								.DownloadDemo(SiJiXinXiBean.car_picture4),
 								siji_name4, application.options);
 						image4 = SiJiXinXiBean.car_picture4;
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.driving_license1,
+								ToolUtils
+								.DownloadDemo(SiJiXinXiBean.driving_license1),
 								siji_name5, application.options);
 						image5 = SiJiXinXiBean.driving_license1;
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.taxi_license,
+								ToolUtils
+								.DownloadDemo(SiJiXinXiBean.taxi_license),
 								siji_name6, application.options);
 						image6 = SiJiXinXiBean.taxi_license;
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						String a = SiJiXinXiBean.identity_card;
-						String b[] = a.split("jpg");
-						String c = b[0].substring(1) + "jpg";
-						ImageLoader.getInstance().displayImage(Net.PICURL + c,
+						String b[] = a.split("\\|");
+						ImageLoader.getInstance().displayImage(ToolUtils
+								.DownloadDemo(b[0]),
 								siji_name7, application.options);
-						image7 = c;
+						image7 = b[0];
 					}
 					if (!SiJiXinXiBean.car_picture1.equals("")) {
 						ImageLoader.getInstance().displayImage(
-								Net.PICURL + SiJiXinXiBean.car_safe,
+								ToolUtils
+								.DownloadDemo(SiJiXinXiBean.car_safe),
 								siji_name8, application.options);
 						image8 = SiJiXinXiBean.car_safe;
 						// showToast("car_safe" + SiJiXinXiBean.car_safe);

@@ -346,7 +346,7 @@ public class MyInformationActivity extends BaseActivity implements
 		String url = Net.YONGHUXINXI + jiaMi;
 		LogUtils.i("请求的url:" + url);
 		showProgressDialog("加载中...");
-
+//        uploadManager.put(data, key, token, completionHandler, options);
 		application.doGet(url, new RequestCallBack<String>() {
 
 			@Override
@@ -366,7 +366,7 @@ public class MyInformationActivity extends BaseActivity implements
 				if (UpdateTuXiangBean.status.equals("0")) {
 					showToast("上传成功");
 				} else {
-					showToast("上传失败");
+					showToast("上传失败,"+UpdateTuXiangBean.msg);
 				}
 			}
 		});

@@ -208,7 +208,7 @@ public class Registerb extends BaseActivity implements OnClickListener {
 							Registerb.this.finish();
 						} else {
 							dismissProgressDialog();
-							showToast("注册失败！");
+							showToast("注册失败！"+statusbean.msg);
 						}
 					}
 

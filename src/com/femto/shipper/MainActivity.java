@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements BDLocationListener {
 	private LocationClient mLocClient;
 /**
- * 娴嬭瘯github 不是吧水电费水电费
+ * 濞村鐦痝ithub
  */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -2,7 +2,7 @@ package com.femto.shipper.utils;
 
 public interface Net {
 
-	// String BASE = "http://192.168.1.120:8001/";
+//	 String BASE = "http://192.168.1.154:8001/";
 	// 121.201.5.229
 	String BASE = "http://121.201.5.229:8001/";
 	String PICURL = "http://121.201.5.229:8001/";

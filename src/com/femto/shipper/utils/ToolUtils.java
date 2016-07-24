@@ -134,8 +134,6 @@ public class ToolUtils {
 			encryptDES = DES.encrypt(encodeToString);
 			String md5 = MD5.code(encryptDES, 16);
 			encryptDES = encryptDES + md5;
-			// LogUtils.i("MD5��֤" + md5);
-			// LogUtils.i("�����Ĳ�des����:" + encryptDES);
 			return encryptDES;
 		} catch (Exception e) {
 			LogUtils.i("���ܴ���");

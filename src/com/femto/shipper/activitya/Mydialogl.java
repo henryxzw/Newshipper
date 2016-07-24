@@ -115,12 +115,12 @@ public class Mydialogl extends Activity implements OnClickListener
 			}
 			break;
 		case R.id.mydialoglllc:
-			Toast.makeText(context, nwktylzfgn, Toast.LENGTH_SHORT).show();
-			// mydialoglllc.setBackgroundResource(R.drawable.sgapelogl);
-			// mydialogllla.setBackground(null);
-			// mydialoglllb.setBackground(null);
-			// dialogcallbackl.dialogdol(3);
-			// dialog.dismiss();
+//			Toast.makeText(context, nwktylzfgn, Toast.LENGTH_SHORT).show();
+			 mydialoglllc.setBackgroundResource(R.drawable.sgapelogl);
+			 mydialogllla.setBackground(null);
+			 mydialoglllb.setBackground(null);
+			 dialogcallbackl.dialogdol(3);
+			 dialog.dismiss();
 			break;
 		}
 	}

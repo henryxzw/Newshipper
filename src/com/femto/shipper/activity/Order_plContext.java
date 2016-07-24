@@ -34,6 +34,7 @@ import com.femto.shipper.bean.YundanXQBean;
 import com.femto.shipper.utils.GsonUtils;
 import com.femto.shipper.utils.Net;
 import com.femto.shipper.utils.ToolUtils;
+import com.google.android.gms.internal.el;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
@@ -180,7 +181,14 @@ public class Order_plContext extends BaseActivity implements OnClickListener {
 			Looper.loop();
 		} else if (points.size() > 1) {
 			Looper.prepare();
-			gls = String.valueOf(distance / 1000);
+			double x = distance / 1000;
+			if(x<0)
+			{
+				gls = "0";
+			}
+			else {
+				gls = String.valueOf(x);
+			}
 			Looper.loop();
 		}
 	}
@@ -261,7 +269,13 @@ public class Order_plContext extends BaseActivity implements OnClickListener {
 					// startActivity(MainActivity.class);
 					finish();
 				} else {
-					showToast(Order_ZT.status + Order_ZT.msg);
+					if(Order_ZT.msg == null)
+					{
+					showToast("订单取消失败");
+					}
+					else {
+						showToast("订单取消失败,"+Order_ZT.msg);
+					}
 				}
 			}
 		});

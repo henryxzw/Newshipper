@@ -7,6 +7,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Random;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -32,6 +36,7 @@ import android.widget.Toast;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.ZoomControls;
+
 import com.alipay.sdk.app.PayTask;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -56,6 +61,7 @@ import com.femto.shipper.alipay.SignUtils;
 import com.femto.shipper.base.BaseActivity;
 import com.femto.shipper.bean.SiJiXinXiBean;
 import com.femto.shipper.bean.StatusBean;
+import com.femto.shipper.unionpay.RSAUtil;
 import com.femto.shipper.utils.GsonUtils;
 import com.femto.shipper.utils.Net;
 import com.femto.shipper.utils.ToolUtils;
@@ -66,6 +72,7 @@ import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.umeng.analytics.MobclickAgent;
+import com.unionpay.UPPayAssistEx;
 
 @SuppressLint("HandlerLeak")
 public class Aapd extends BaseActivity implements OnClickListener,
@@ -97,6 +104,10 @@ public class Aapd extends BaseActivity implements OnClickListener,
 	private CountDownTimer countdowntimer = null, countdowntimera = null;
 	private IntentFilter filter;// filtera
 	private static int online = 0;
+	
+	// “00” – 银联正式环境
+	// “01” – 银联测试环境，该环境中不发生真实交易
+	private String serverMode = "00";
 
 	// private Aapdbroad aapdbroad;
 	@Override
@@ -389,7 +400,8 @@ public class Aapd extends BaseActivity implements OnClickListener,
 						mydialogo.setDialogCallbacko(mydialogodissmiss);
 						mydialogo.show();
 						countdowntimer.cancel();
-						if (paymentid.equals("2")) {
+						//支付宝和信用卡用户时效性
+						if (paymentid.equals("2") || paymentid.equals("3")) {
 							zfdjs(300000);
 							// zfdjs(5000);
 						} else if (paymentid.equals("1")) {
@@ -998,6 +1010,8 @@ public class Aapd extends BaseActivity implements OnClickListener,
 	};
 
 	public void pay(String order_no, String order_no2, String amount) {
+		if(paymentid.equals("2"))
+		{//支付宝执行
 		if (TextUtils.isEmpty(PARTNER) || TextUtils.isEmpty(RSA_PRIVATE)
 				|| TextUtils.isEmpty(SELLER)) {
 			new AlertDialog.Builder(mContext)
@@ -1040,6 +1054,98 @@ public class Aapd extends BaseActivity implements OnClickListener,
 		};
 		Thread payThread = new Thread(payRunnable);
 		payThread.start();
+		}
+		else {
+			//银联卡支付
+			application.doget("", new RequestCallBack<String>() {
+
+				@Override
+				public void onFailure(HttpException arg0, String arg1) {
+					// TODO Auto-generated method stub
+					showToast("获取失败，请检查网络");
+				}
+
+				@Override
+				public void onSuccess(ResponseInfo<String> arg0) {
+					String orderNum = arg0.result;
+					UPPayAssistEx.startPay(Aapd.this, null, null, orderNum, serverMode);
+				}
+			});
+			
+		}
+	}
+	
+	
+   	
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		 /*************************************************
+         * 步骤3：处理银联手机支付控件返回的支付结果
+         ************************************************/
+        if (data == null) {
+            return;
+        }
+
+        String msg = "";
+        /*
+         * 支付控件返回字符串:success、fail、cancel 分别代表支付成功，支付失败，支付取消
+         */
+        String str = data.getExtras().getString("pay_result");
+        if (str.equalsIgnoreCase("success")) {
+            // 支付成功后，extra中如果存在result_data，取出校验
+            // result_data结构见c）result_data参数说明
+            if (data.hasExtra("result_data")) {
+                String result = data.getExtras().getString("result_data");
+                try {
+                    JSONObject resultJson = new JSONObject(result);
+                    String sign = resultJson.getString("sign");
+                    String dataOrg = resultJson.getString("data");
+                  
+                    // 验签证书同后台验签证书
+                    // 此处的verify，商户需送去商户后台做验签
+                    boolean ret = RSAUtil.verify(dataOrg, sign, serverMode);
+                    if(ret)
+                    {
+                    	msg = "支付成功！";
+                    }
+                    else {
+						msg="支付失败！";
+					}
+                   HandlePayResult(ret);
+                } catch (JSONException e) {
+                	msg = "出现异常，支付失败！";
+                }
+            } else {
+                // 未收到签名信息
+                // 建议通过商户后台查询支付结果
+                msg = "支付成功,未收到签名信息，请留意客服通知！";
+            }
+        } else if (str.equalsIgnoreCase("fail")) {
+            msg = "支付失败！";
+        } else if (str.equalsIgnoreCase("cancel")) {
+            msg = "用户取消了支付";
+        }
+        showToast(msg);
+	}
+	
+	private boolean verify(String msg, String sign64, String mode) {
+        // 此处的verify，商户需送去商户后台做验签
+        return true;
+
+    }
+	
+	public void HandlePayResult(boolean isSuccess)
+	{
+		if (isSuccess) {
+			Aapd.this.finish();
+			Ycactivitya.ycactivitya.finish();
+			countdowntimer.cancel();
+			countdowntimera.cancel();
+			startActivity(new Intent(Aapd.this, OrderActivity.class));
+		} else {
+				sfpd();
+		}
 	}
 
 	public void getSDKVersion() {

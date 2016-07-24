@@ -13,6 +13,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
@@ -38,10 +41,12 @@ import com.femto.shipper.application.Constant;
 import com.femto.shipper.application.DemoApplication;
 import com.femto.shipper.application.DemoHXSDKHelper;
 import com.femto.shipper.base.BaseActivity;
+import com.femto.shipper.bean.GengXing;
 import com.femto.shipper.bean.StatusBean;
 import com.femto.shipper.utils.GsonUtils;
 import com.femto.shipper.utils.Net;
 import com.femto.shipper.utils.ToolUtils;
+import com.femto.shipper.utils.Utils_GX;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
@@ -51,6 +56,7 @@ import com.umeng.analytics.MobclickAgent;
 public class LanActivity extends BaseActivity implements OnClickListener {
 
 	private Button btn_denglu;
+	private int old_version;
 	private TextView text_zuce, text_dianji;
 	private EditText editext_phone, editext_password;
 	private String phone, pwd, telmanagerid, androidid, serialnumber, wybs,
@@ -78,6 +84,48 @@ public class LanActivity extends BaseActivity implements OnClickListener {
 		text_dianji.setOnClickListener(this);
 		text_zuce.setOnClickListener(this);
 		btn_denglu.setOnClickListener(this);
+		gengxing();
+	}
+	
+	private void gengxing() {
+		application
+				.doGet("http://api.fir.im/apps/latest/com.femto.shipper?api_token=358e7b651dc999c3e696c202a9595a6f&type=android",
+						new RequestCallBack<String>() {
+							@Override
+							public void onSuccess(ResponseInfo<String> arg0) {
+								GengXing qianbaoBean = GsonUtils.json2Bean(
+										arg0.result, GengXing.class);
+								if (!qianbaoBean.name.equals("")) {
+									String gx_rizi = qianbaoBean.changelog;
+									String gx_ver = qianbaoBean.versionShort;
+									String gx_version = qianbaoBean.version;
+									String apkUrl = qianbaoBean.install_url;
+									String vername = "_V" + qianbaoBean.version;
+									PackageManager manager = getPackageManager();
+									PackageInfo info;
+									try {
+										info = manager.getPackageInfo(
+												getPackageName(), 0);
+										old_version = info.versionCode;
+									} catch (NameNotFoundException e) {
+										e.printStackTrace();
+									}
+									// //判断版本号是不是最新的
+									if (Double.valueOf(gx_version) > old_version) {
+										Utils_GX.dialog_gengxing(gx_rizi,
+												gx_ver, gx_version, apkUrl,
+												vername,
+												LanActivity.lanactivity);
+									}
+								}
+							}
+
+							@Override
+							public void onFailure(HttpException arg0,
+									String arg1) {
+								showToast("网络异常.....");
+							}
+						});
 	}
 
 	private void showdialog() {

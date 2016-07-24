@@ -79,7 +79,7 @@ public class DES {
 	    
 	
 //	=================================
-	final static String password = "12345678";
+	final static String password = "spvan33@";
 	/**
 	 * 加密
 	 * @param datasource

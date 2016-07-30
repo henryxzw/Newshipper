@@ -39,10 +39,6 @@ import com.femto.shipper.utils.Utils_GX;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.update.UmengUpdateAgent;
-import com.umeng.update.UmengUpdateListener;
-import com.umeng.update.UpdateResponse;
 
 public class SettingActivity extends BaseActivity implements OnClickListener {
 	private String phonea, passworda;
@@ -267,11 +263,9 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

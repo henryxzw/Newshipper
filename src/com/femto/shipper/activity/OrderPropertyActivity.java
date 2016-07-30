@@ -43,7 +43,6 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.umeng.analytics.MobclickAgent;
 
 /**
  * @author mac 订单信息
@@ -2422,11 +2421,9 @@ public class OrderPropertyActivity extends BaseActivity implements
 	public void onResume() {
 		super.onResume();
 		huoqudangedindan(orderno);
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

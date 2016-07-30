@@ -123,5 +123,11 @@ public interface Net {
 	String TONGYONG = BASE + "api/android/user.ashx?action=";
 	// String SEVERTIME = BASE + "api/android/test.ashx?action=get_server_time";
 	String SEVERTIME = BASE + "api/android/user.ashx?action=";
+	
+	/**
+	 * new create by henry
+	 */
+	//银联支付获取交易流水号
+	String UNServer = BASE + "api/payment/unionpay/AppConsume.aspx";
 
 }

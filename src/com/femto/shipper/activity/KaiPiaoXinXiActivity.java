@@ -43,7 +43,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 /**
  * @author mac 开票信息
@@ -433,11 +432,9 @@ public class KaiPiaoXinXiActivity extends BaseActivity implements
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

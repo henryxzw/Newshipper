@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import com.femto.shipper.R;
 import com.femto.shipper.base.BaseActivity;
-import com.umeng.analytics.MobclickAgentJSInterface;
 
 public class Web_INTENT extends BaseActivity {
 	@Override
@@ -17,7 +16,6 @@ public class Web_INTENT extends BaseActivity {
 		setContentView(R.layout.activity_web_intent);
 		TextView text_name_web = (TextView) findViewById(R.id.text_name_web);
 		WebView webview = (WebView) findViewById(R.id.web_intent);
-		new MobclickAgentJSInterface(this, webview);
 		if (getIntent().getStringExtra("type").toString().equals("A")) {
 			webview.loadUrl("http://www.spvan.com/mycontent.aspx?page=user_terms"); // 指定要加载的网页
 			text_name_web.setText("用户协议");

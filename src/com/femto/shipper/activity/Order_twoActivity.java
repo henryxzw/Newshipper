@@ -43,7 +43,6 @@ import com.femto.shipper.utils.Utils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class Order_twoActivity extends BaseActivity implements OnClickListener
 {
@@ -399,12 +398,10 @@ public class Order_twoActivity extends BaseActivity implements OnClickListener
 	public void onResume()
 	{
 		super.onResume();
-		MobclickAgent.onResume(this); // 统计时长
 	}
 
 	public void onPause()
 	{
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

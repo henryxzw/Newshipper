@@ -33,6 +33,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BaiduMap.OnMapLoadedCallback;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
@@ -58,7 +59,6 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.umeng.analytics.MobclickAgent;
 
 @SuppressLint("NewApi")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -189,6 +189,9 @@ public class Order_op_ydxq extends BaseActivity implements OnClickListener {
 		lbstraceclient
 				.setLocationMode(com.baidu.trace.LocationMode.High_Accuracy);
 		mMapView.setVisibility(View.VISIBLE);
+		//初始定位广州
+		mapcenter(new LatLng(23.1353080000,113.2707930000));
+		
 		getintent();
 		myservice = new Myservice();
 		filter = new IntentFilter();
@@ -896,14 +899,20 @@ public class Order_op_ydxq extends BaseActivity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		getintentYD(yid);
-		MobclickAgent.onResume(this);
+		mBaiduMap.setOnMapLoadedCallback(new OnMapLoadedCallback() {
+			
+			@Override
+			public void onMapLoaded() {
+				// TODO Auto-generated method stub
+				getintentYD(yid);
+			}
+		});
+		
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 	// private void fwfwq() {
 	// Map<String, String> map = new HashMap<String, String>();

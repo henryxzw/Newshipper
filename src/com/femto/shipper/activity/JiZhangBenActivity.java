@@ -32,7 +32,6 @@ import com.femto.shipper.yue.ChangeBirthDialog.OnBirthListener;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class JiZhangBenActivity extends BaseActivity implements OnClickListener {
 
@@ -302,11 +301,9 @@ public class JiZhangBenActivity extends BaseActivity implements OnClickListener 
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

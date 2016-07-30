@@ -65,7 +65,6 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.qiniu.android.storage.UpCompletionHandler;
 import com.qiniu.android.storage.UploadManager;
-import com.umeng.analytics.MobclickAgent;
 
 public class KaiPiao_ZengZhi extends BaseActivity implements OnClickListener,
 		RemoveListener {
@@ -856,11 +855,9 @@ public class KaiPiao_ZengZhi extends BaseActivity implements OnClickListener,
 		kaipioagv.setAdapter(gridkaipioagvadapter);
 		getinfo();
 		sctp();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

@@ -27,7 +27,6 @@ import com.femto.shipper.base.BaseActivity;
 import com.femto.shipper.fragment.Order_DHCX;
 import com.femto.shipper.fragment.YunDan_fragment;
 import com.femto.shipper.utils.AllCapTransformationMethod;
-import com.umeng.analytics.MobclickAgent;
 
 /**
  * @author mac 我的订单
@@ -235,11 +234,9 @@ public class OrderActivity extends BaseActivity implements OnClickListener {
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this); // 统计时长
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

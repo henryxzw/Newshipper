@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -42,13 +43,14 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 import com.femto.shipper.activityab.Mydialogd;
 import com.femto.shipper.activityab.Mydialoge;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -253,7 +255,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 		datea = null;
 		sharedPreferences = null;
 		sharedPreferencesb = null;
-		// sharedPreferencesc = null;
+		
 		gallerya = null;
 		if (geocodera != null) {
 			geocodera.destroy();
@@ -1061,7 +1063,6 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 		}
 		yy();
 		// dk(ztdsl);
-		MobclickAgent.onResume(this);
 	}
 
 	private void zx() {
@@ -1115,7 +1116,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 			strycatvb = bundlea.getString("strycatvb");
 			ycatvb.setText(strycatvb);
 			if (!ztadd.trim().equals("null")) {
-				ztaddressa.setText(ztadd);
+				int index = ztadd.indexOf("&");
+				ztaddressa.setText(ztadd.substring(index+1));
 				if (!ztaname.trim().equals("null")) {
 					addztdlxrnamea.setText(ztaname);
 				}
@@ -1124,7 +1126,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztbdd.trim().equals("null")) {
-				ztaddressb.setText(ztbdd);
+				int index = ztbdd.indexOf("&");
+				ztaddressb.setText(ztbdd.substring(index+1));
 				if (!ztbname.trim().equals("null")) {
 					addztdlxrnameb.setText(ztbname);
 				}
@@ -1133,7 +1136,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztcdd.trim().equals("null")) {
-				ztaddressc.setText(ztcdd);
+				int index = ztcdd.indexOf("&");
+				ztaddressc.setText(ztcdd.substring(index+1));
 				if (!ztcname.trim().equals("null")) {
 					addztdlxrnamec.setText(ztcname);
 				}
@@ -1142,7 +1146,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztddd.trim().equals("null")) {
-				ztaddressd.setText(ztddd);
+				int index = ztddd.indexOf("&");
+				ztaddressd.setText(ztddd.substring(index+1));
 				if (!ztdname.trim().equals("null")) {
 					addztdlxrnamed.setText(ztdname);
 				}
@@ -1151,7 +1156,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztedd.trim().equals("null")) {
-				ztaddresse.setText(ztedd);
+				int index = ztedd.indexOf("&");
+				ztaddresse.setText(ztedd.substring(index+1));
 				if (!ztename.trim().equals("null")) {
 					addztdlxrnamee.setText(ztename);
 				}
@@ -1160,7 +1166,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!zhdd.trim().equals("null")) {
-				zhaddress.setText(zhdd);
+				int index = zhdd.indexOf("&");
+				zhaddress.setText(zhdd.substring(index+1));
 				if (!zhname.trim().equals("null")) {
 					zhlxrname.setText(zhname);
 				}
@@ -1169,7 +1176,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!xhdd.trim().equals("null")) {
-				xhaddress.setText(xhdd);
+				int index = xhdd.indexOf("&");
+				xhaddress.setText(xhdd.substring(index+1));
 				if (!xhname.trim().equals("null")) {
 					xhlxrname.setText(xhname);
 				}
@@ -1241,7 +1249,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 			strycatvb = bundlea.getString("strycatvb");
 			ycatvb.setText(strycatvb);
 			if (!ztadd.trim().equals("null")) {
-				ztaddressa.setText(ztadd);
+				int index = ztadd.indexOf("&");
+				ztaddressa.setText(ztadd.substring(index+1));
 				if (!ztaname.trim().equals("null")) {
 					addztdlxrnamea.setText(ztaname);
 				}
@@ -1250,7 +1259,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztbdd.trim().equals("null")) {
-				ztaddressb.setText(ztbdd);
+				int index = ztbdd.indexOf("&");
+				ztaddressb.setText(ztbdd.substring(index+1));
 				if (!ztbname.trim().equals("null")) {
 					addztdlxrnameb.setText(ztbname);
 				}
@@ -1259,7 +1269,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztcdd.trim().equals("null")) {
-				ztaddressc.setText(ztcdd);
+				int index = ztcdd.indexOf("&");
+				ztaddressc.setText(ztcdd.substring(index+1));
 				if (!ztcname.trim().equals("null")) {
 					addztdlxrnamec.setText(ztcname);
 				}
@@ -1268,7 +1279,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztddd.trim().equals("null")) {
-				ztaddressd.setText(ztddd);
+				int index = ztddd.indexOf("&");
+				ztaddressd.setText(ztddd.substring(index+1));
 				if (!ztdname.trim().equals("null")) {
 					addztdlxrnamed.setText(ztdname);
 				}
@@ -1277,7 +1289,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!ztedd.trim().equals("null")) {
-				ztaddresse.setText(ztedd);
+				int index = ztedd.indexOf("&");
+				ztaddresse.setText(ztedd.substring(index+1));
 				if (!ztename.trim().equals("null")) {
 					addztdlxrnamee.setText(ztename);
 				}
@@ -1286,7 +1299,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!zhdd.trim().equals("null")) {
-				zhaddress.setText(zhdd);
+				int index = zhdd.indexOf("&");
+				zhaddress.setText(zhdd.substring(index+1));
 				if (!zhname.trim().equals("null")) {
 					zhlxrname.setText(zhname);
 				}
@@ -1295,7 +1309,8 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				}
 			}
 			if (!xhdd.trim().equals("null")) {
-				xhaddress.setText(xhdd);
+				int index = xhdd.indexOf("&");
+				xhaddress.setText(xhdd.substring(index+1));
 				if (!xhname.trim().equals("null")) {
 					xhlxrname.setText(xhname);
 				}
@@ -1303,11 +1318,13 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 					xhlxrdh.setText(xhtel);
 				}
 			}
+			int index = newaddress.indexOf("&");
+			String tempAddress = newaddress.substring(index+1);
 			if (djddf.equals("zhdd")) {
 				zhdd = newaddress;
 				zhname = newname;
 				zhtel = newtel;
-				zhaddress.setText(newaddress);
+				zhaddress.setText(tempAddress);
 				zhlxrname.setText(newname);
 				zhlxrtel.setText(newtel);
 				zhlat = newlat;
@@ -1316,7 +1333,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				xhdd = newaddress;
 				xhname = newname;
 				xhtel = newtel;
-				xhaddress.setText(newaddress);
+				xhaddress.setText(tempAddress);
 				xhlxrname.setText(newname);
 				xhlxrdh.setText(newtel);
 				xhlat = newlat;
@@ -1325,7 +1342,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				ztadd = newaddress;
 				ztaname = newname;
 				ztatel = newtel;
-				ztaddressa.setText(newaddress);
+				ztaddressa.setText(tempAddress);
 				addztdlxrnamea.setText(newname);
 				addztdlxrtela.setText(newtel);
 				ztdalat = newlat;
@@ -1334,7 +1351,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				ztbdd = newaddress;
 				ztbname = newname;
 				ztbtel = newtel;
-				ztaddressb.setText(newaddress);
+				ztaddressb.setText(tempAddress);
 				addztdlxrnameb.setText(newname);
 				addztdlxrtelb.setText(newtel);
 				ztdblat = newlat;
@@ -1343,7 +1360,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				ztcdd = newaddress;
 				ztcname = newname;
 				ztctel = newtel;
-				ztaddressc.setText(newaddress);
+				ztaddressc.setText(tempAddress);
 				addztdlxrnamec.setText(newname);
 				addztdlxrtelc.setText(newtel);
 				ztdclat = newlat;
@@ -1352,7 +1369,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				ztddd = newaddress;
 				ztdname = newname;
 				ztdtel = newtel;
-				ztaddressd.setText(newaddress);
+				ztaddressd.setText(tempAddress);
 				addztdlxrnamed.setText(newname);
 				addztdlxrteld.setText(newtel);
 				ztddlat = newlat;
@@ -1361,7 +1378,7 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 				ztedd = newaddress;
 				ztename = newname;
 				ztetel = newtel;
-				ztaddresse.setText(newaddress);
+				ztaddresse.setText(tempAddress);
 				addztdlxrnamee.setText(newname);
 				addztdlxrtele.setText(newtel);
 				ztdelat = newlat;
@@ -2236,7 +2253,6 @@ public class Ycactivitya extends BaseActivity implements OnClickListener,
 	protected void onPause() {
 		super.onPause();
 		ada = "hello";
-		MobclickAgent.onPause(this);
 	}
 
 	private void geojs() {

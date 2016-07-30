@@ -1,6 +1,7 @@
 package com.femto.shipper.activitya;
 
 import java.util.List;
+
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -34,8 +35,9 @@ import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.poi.PoiSearch;
 import com.femto.shipper.R;
 import com.femto.shipper.activitya.FilpperListvew.FilpperDeleteListener;
+import com.femto.shipper.adapter.ListViewAdapter;
 import com.femto.shipper.base.BaseActivity;
-import com.umeng.analytics.MobclickAgent;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -48,10 +50,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.widget.CursorAdapter;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
@@ -245,13 +249,11 @@ public class Baidumap extends BaseActivity implements OnClickListener,
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	private void bundle() {
@@ -317,11 +319,13 @@ public class Baidumap extends BaseActivity implements OnClickListener,
 				intenta = new Intent(Baidumap.this, Addressposition.class);
 				bundlea = new Bundle();
 				if (sdj == 1) {
-					bundlea.putString(address, qcdaddress + "&" + acdname);
+					bundlea.putString(address,  acdname);
+					bundlea.putString("addressDetail", qcdaddress );
 					bundlea.putString(lat, qcdla);
 					bundlea.putString(lon, qcdlo);
 				} else if (sdj == 2) {
-					bundlea.putString(address, qcdaddressb + "&" + acdnameb);
+					bundlea.putString(address,  acdnameb);
+					bundlea.putString("addressDetail", qcdaddress );
 					bundlea.putString(lat, qcdlab);
 					bundlea.putString(lon, qcdlob);
 				} else if (sdj == 3) {
@@ -576,10 +580,37 @@ public class Baidumap extends BaseActivity implements OnClickListener,
 		cursor = sh.select();
 		cursord = shd.select();
 		sh.deletehi();
-		simplecursoradapterc = new SimpleCursorAdapter(this, R.layout.history,
-				cursorc, new String[] { keyb, keya, keyc }, new int[] {
-						R.id.listtxta, R.id.listtxtb, R.id.listtxtc });
-		bmlvc.setAdapter(simplecursoradapterc);
+		CursorAdapter cursorAdapter = new CursorAdapter(this,cursorc) {
+			
+			@Override
+			public View newView(Context arg0, Cursor arg1, ViewGroup arg2) {
+				View view = View.inflate(arg0, R.layout.history, null);
+				return view;
+			}
+			
+			@Override
+			public void bindView(View arg0, Context arg1, Cursor arg2) {
+				String address = arg2.getString(arg2.getColumnIndex(keyb));
+				String[] addrs = address.split("&");
+				if(addrs.length>1)
+				{
+					address = addrs[1];
+				}
+				String name = arg2.getString(arg2.getColumnIndex(keya));
+				String tel = arg2.getString(arg2.getColumnIndex(keyc));
+				TextView tv_address = (TextView)arg0.findViewById(R.id.listtxta);
+				TextView tv_name = (TextView)arg0.findViewById(R.id.listtxtb);
+				TextView tv_tel = (TextView)arg0.findViewById(R.id.listtxtc);
+				tv_address.setText(address);
+				tv_name.setText(name);
+				tv_tel.setText(tel);
+			}
+		};
+
+//		simplecursoradapterc = new SimpleCursorAdapter(this, R.layout.history,
+//				cursorc, new String[] { keyb, keya, keyc }, new int[] {
+//						R.id.listtxta, R.id.listtxtb, R.id.listtxtc });
+		bmlvc.setAdapter(cursorAdapter);
 		simplecursoradaptera = new SimpleCursorAdapter(this, R.layout.zdssa,
 				cursor, new String[] { keya, keyb }, new int[] { R.id.zdssatva,
 						R.id.zdssatvb });
@@ -1037,6 +1068,11 @@ public class Baidumap extends BaseActivity implements OnClickListener,
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 				long arg3) {
 			histaddress = cursorc.getString(1);
+			String[] addrs = histaddress.split("&");
+			if(addrs.length>1)
+			{
+				histaddress = addrs[1];
+			}
 			histname = cursorc.getString(2);
 			histtel = cursorc.getString(3);
 			histla = cursorc.getString(4);

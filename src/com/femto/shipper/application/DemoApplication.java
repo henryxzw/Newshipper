@@ -39,6 +39,7 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.tencent.bugly.crashreport.CrashReport;
 
 public class DemoApplication extends Application {
 
@@ -80,7 +81,7 @@ public class DemoApplication extends Application {
 		 *         HXHelper = new DemoHXSDKHelper();
 		 *         if(HXHelper.onInit(context)){ // do HuanXin related work }
 		 */
-
+      
 		http = new HttpUtils(10000);
 		initImageLoader(instance);
 		intOptions();
@@ -88,7 +89,7 @@ public class DemoApplication extends Application {
 		initBaiduMap();
 		hxSDKHelper.onInit(applicationContext);
 		JPushInterface.init(this); // 鍒濆鍖� JPush
-
+		CrashReport.initCrashReport(getApplicationContext(), "33a9c6e15f", false);
 	}
 
 	public static DemoApplication getInstance() {
@@ -106,8 +107,8 @@ public class DemoApplication extends Application {
 
 	public void doPost(String url, RequestParams params,
 			final RequestCallBack<String> callBack) {
-		http.configTimeout(3000);
-		http.configSoTimeout(3000);
+		http.configTimeout(8000);
+		http.configSoTimeout(10000);
 		http.configCurrentHttpCacheExpiry(1);// //1绉掍箣鍚庢竻绌虹紦瀛�
 		http.send(HttpMethod.POST, url, params, callBack);
 	}
@@ -198,7 +199,7 @@ public class DemoApplication extends Application {
 	public void intOptions() {
 		options = new DisplayImageOptions.Builder()
 		// 璁剧疆鍥剧墖鍦ㄤ笅杞芥湡闂存樉绀虹殑鍥剧墖
-				.showStubImage(R.drawable.morentouxiang)
+				.showImageOnLoading(R.drawable.icon_loading)
 				// 璁剧疆鍥剧墖鍔犺浇/瑙ｇ爜杩囩▼涓敊璇椂鍊欐樉绀虹殑鍥剧墖
 				.showImageOnFail(R.drawable.morentouxiang)
 				// 璁剧疆鍥剧墖Uri涓虹┖鎴栨槸閿欒鐨勬椂鍊欐樉绀虹殑鍥剧墖

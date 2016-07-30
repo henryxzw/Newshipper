@@ -50,7 +50,6 @@ import com.femto.shipper.utils.Utils_GX;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 @SuppressLint("NewApi")
 public class LanActivity extends BaseActivity implements OnClickListener {
@@ -393,13 +392,11 @@ public class LanActivity extends BaseActivity implements OnClickListener {
 			showdialog();
 		}
 		JPushInterface.onResume(mContext);
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		JPushInterface.onPause(mContext);
-		MobclickAgent.onPause(this);
 	}
 }

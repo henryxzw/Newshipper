@@ -70,7 +70,6 @@ import com.femto.shipper.utils.Utils_GX;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 @SuppressLint("ShowToast")
 public class MainActivity extends BaseActivity implements OnClickListener {
@@ -152,7 +151,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		// editor = sharedpreferencesa.edit();
 		mySharedPreferencesa = getSharedPreferences("user_xinxi",
 				Activity.MODE_PRIVATE);
-		MobclickAgent.onProfileSignIn(phonea);
 		initHuanXin();// //环信状态
 		findViewById(R.id.rela_find).setOnClickListener(this);
 		findViewById(R.id.rela_yueche).setOnClickListener(this);
@@ -488,12 +486,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		if (newcity != null) {
 			getDataForNet(newcity);
 		}
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	private void initHuanXin() {

@@ -26,7 +26,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -312,13 +311,11 @@ public class Registerb extends BaseActivity implements OnClickListener {
 	protected void onResume() {
 		super.onResume();
 		JPushInterface.onResume(mContext);
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		JPushInterface.onPause(mContext);
-		MobclickAgent.onPause(this);
 	}
 }

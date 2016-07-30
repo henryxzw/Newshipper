@@ -40,7 +40,6 @@ import com.femto.shipper.utils.Utils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class YunDan_fragment_two extends BaseFragment
 {
@@ -246,12 +245,10 @@ public class YunDan_fragment_two extends BaseFragment
 	public void onResume()
 	{
 		super.onResume();
-		MobclickAgent.onPageStart("YunDan_fragment_two"); // 统计页面，"MainScreen"为页面名称，可自定义
 	}
 
 	public void onPause()
 	{
 		super.onPause();
-		MobclickAgent.onPageEnd("YunDan_fragment_two");
 	}
 }

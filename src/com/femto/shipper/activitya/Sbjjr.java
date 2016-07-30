@@ -20,7 +20,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class Sbjjr extends BaseActivity implements OnClickListener {
 	private RelativeLayout sbjjrrla;
@@ -61,13 +60,11 @@ public class Sbjjr extends BaseActivity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	@Override

@@ -40,7 +40,6 @@ import com.femto.shipper.base.BaseFragment;
 import com.femto.shipper.bean.DanDin_SOSO;
 import com.femto.shipper.bean.DanDin_SOSO.OrderListB;
 import com.femto.shipper.utils.LogUtils;
-import com.umeng.analytics.MobclickAgent;
 
 public class Dindan_Fragment_two extends BaseFragment
 {
@@ -316,12 +315,10 @@ public class Dindan_Fragment_two extends BaseFragment
 	public void onResume()
 	{
 		super.onResume();
-		MobclickAgent.onPageStart("Dindan_Fragment_two"); // 统计页面，"MainScreen"为页面名称，可自定义
 	}
 
 	public void onPause()
 	{
 		super.onPause();
-		MobclickAgent.onPageEnd("Dindan_Fragment_two");
 	}
 }

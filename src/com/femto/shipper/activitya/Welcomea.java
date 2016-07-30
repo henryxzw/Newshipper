@@ -27,8 +27,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.AnalyticsConfig;
-import com.umeng.analytics.MobclickAgent;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -59,8 +57,7 @@ public class Welcomea extends BaseActivity {
 		setContentView(R.layout.welcomea);
 		loginout();
 		freelogin();
-		AnalyticsConfig.enableEncrypt(true);
-		MobclickAgent.setDebugMode(true);
+	
 	}
 
 	@SuppressWarnings("deprecation")
@@ -280,7 +277,6 @@ public class Welcomea extends BaseActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 		JPushInterface.onResume(mContext);
 	}
 
@@ -294,6 +290,5 @@ public class Welcomea extends BaseActivity {
 	protected void onPause() {
 		super.onPause();
 		JPushInterface.onPause(mContext);
-		MobclickAgent.onPause(this);
 	}
 }

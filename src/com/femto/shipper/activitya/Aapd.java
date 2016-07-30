@@ -26,6 +26,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -66,12 +67,12 @@ import com.femto.shipper.utils.GsonUtils;
 import com.femto.shipper.utils.Net;
 import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.umeng.analytics.MobclickAgent;
 import com.unionpay.UPPayAssistEx;
 
 @SuppressLint("HandlerLeak")
@@ -108,6 +109,7 @@ public class Aapd extends BaseActivity implements OnClickListener,
 	// “00” – 银联正式环境
 	// “01” – 银联测试环境，该环境中不发生真实交易
 	private String serverMode = "00";
+	private Handler handler = new Handler();
 
 	// private Aapdbroad aapdbroad;
 	@Override
@@ -583,14 +585,12 @@ public class Aapd extends BaseActivity implements OnClickListener,
 	protected void onResume() {
 		super.onResume();
 		// JPushInterface.onResume(mContext);
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		// aapd = "hello";
-		MobclickAgent.onPause(this);
 		
 	}
 
@@ -694,7 +694,7 @@ public class Aapd extends BaseActivity implements OnClickListener,
 		@Override
 		public void dialogdoo(int a) {
 			if (a == 1) {
-				if (paymentid.equals("2")) {
+				if (paymentid.equals("2") || paymentid.equals("3")) {
 					// pay(orderno, orderno, orderamounta);
 					zfz = 1;
 					pay(orderno, orderno, orderamounta);
@@ -1012,7 +1012,7 @@ public class Aapd extends BaseActivity implements OnClickListener,
 	public void pay(String order_no, String order_no2, String amount) {
 		if(paymentid.equals("2"))
 		{//支付宝执行
-		if (TextUtils.isEmpty(PARTNER) || TextUtils.isEmpty(RSA_PRIVATE)
+		  if (TextUtils.isEmpty(PARTNER) || TextUtils.isEmpty(RSA_PRIVATE)
 				|| TextUtils.isEmpty(SELLER)) {
 			new AlertDialog.Builder(mContext)
 					.setTitle(getResources().getString(R.string.jg))
@@ -1057,7 +1057,15 @@ public class Aapd extends BaseActivity implements OnClickListener,
 		}
 		else {
 			//银联卡支付
-			application.doget("", new RequestCallBack<String>() {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss", Locale.CHINA);
+			String timeString =simpleDateFormat.format(new Date());
+			RequestParams params = new RequestParams();
+			params.addBodyParameter("orderId", order_no);
+			params.addBodyParameter("txnTime", timeString);
+			int money = Integer.parseInt(orderamounta);
+			params.addBodyParameter("txnAmt", ""+money*100);
+//			params.addBodyParameter("txnAmt", "1");
+			application.doPost(Net.UNServer, params, new RequestCallBack<String>() {
 
 				@Override
 				public void onFailure(HttpException arg0, String arg1) {
@@ -1068,13 +1076,27 @@ public class Aapd extends BaseActivity implements OnClickListener,
 				@Override
 				public void onSuccess(ResponseInfo<String> arg0) {
 					String orderNum = arg0.result;
-					UPPayAssistEx.startPay(Aapd.this, null, null, orderNum, serverMode);
+					Log.e("ttdf", "交易流水号："+orderNum);
+					UNPay(orderNum);
 				}
 			});
-			
 		}
 	}
 	
+	/**
+	 * 银联支付
+	 */
+	private void UNPay(final String orderNum)
+	{
+		handler.post(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				UPPayAssistEx.startPay(Aapd.this, null, null, orderNum, serverMode);
+			}
+		});
+	}
 	
    	
 
@@ -1104,7 +1126,7 @@ public class Aapd extends BaseActivity implements OnClickListener,
                   
                     // 验签证书同后台验签证书
                     // 此处的verify，商户需送去商户后台做验签
-                    boolean ret = RSAUtil.verify(dataOrg, sign, serverMode);
+                    boolean ret = verify(dataOrg, sign, serverMode);
                     if(ret)
                     {
                     	msg = "支付成功！";

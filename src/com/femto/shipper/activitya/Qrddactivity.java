@@ -1,13 +1,16 @@
 package com.femto.shipper.activitya;
 
 import java.util.HashMap;
+
 import android.os.Bundle;
 import android.view.Window;
+
 import com.femto.shipper.R;
 import com.femto.shipper.activitya.Mydialogl.Dialogcallbackl;
 import com.femto.shipper.activitya.Mydialogone.Dialogcallbackone;
 import com.femto.shipper.base.BaseActivity;
 import com.femto.shipper.bean.StatusBean;
+import com.femto.shipper.method.MethodConfig;
 import com.femto.shipper.utils.GsonUtils;
 import com.femto.shipper.utils.Net;
 import com.femto.shipper.utils.ToolUtils;
@@ -18,7 +21,7 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
-import com.umeng.analytics.MobclickAgent;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -313,14 +316,12 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 		spid = sharedpreferencesb.getString("spid", "");
 		sppwd = sharedpreferencesb.getString("sppwd", "");
 		qrddjetv.setText(ToolUtils.fengbujiequ(orderamounta));
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		qrdd = "hello";
-		MobclickAgent.onPause(this);
 	}
 
 	private void xybyza() {
@@ -588,9 +589,9 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 				// ztdllelp = (LayoutParams) ztdlle.getLayoutParams();
 				// ztdllelp.height = 0;
 				// ztdlle.setLayoutParams(ztdllelp);
-
-				qrddtva.setText(zhdd);
-				qrddtvg.setText(xhdd);
+                
+				qrddtva.setText(MethodConfig.GetAddressExAnd(zhdd));
+				qrddtvg.setText(MethodConfig.GetAddressExAnd(xhdd));
 				if (zhtel.equals("") || zhtel.equals("null") || zhtel == null) {
 				} else {
 					qrddtvatel.setText(zhtel);
@@ -615,9 +616,9 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 					ztdlld.setVisibility(View.GONE);
 					ztdllc.setVisibility(View.GONE);
 					ztdllb.setVisibility(View.GONE);
-					qrddtva.setText(zhdd);
-					qrddtvg.setText(xhdd);
-					qrddtvb.setText(ztadd);
+					qrddtva.setText(MethodConfig.GetAddressExAnd(zhdd));
+					qrddtvg.setText(MethodConfig.GetAddressExAnd(xhdd));
+					qrddtvb.setText(MethodConfig.GetAddressExAnd(ztadd));
 					if (zhtel.equals("") || zhtel.equals("null")
 							|| zhtel == null) {
 					} else {
@@ -653,10 +654,10 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 						ztdlle.setVisibility(View.GONE);
 						ztdlld.setVisibility(View.GONE);
 						ztdllc.setVisibility(View.GONE);
-						qrddtva.setText(zhdd);
-						qrddtvg.setText(xhdd);
-						qrddtvb.setText(ztadd);
-						qrddtvc.setText(ztbdd);
+						qrddtva.setText(MethodConfig.GetAddressExAnd(zhdd));
+						qrddtvg.setText(MethodConfig.GetAddressExAnd(xhdd));
+						qrddtvb.setText(MethodConfig.GetAddressExAnd(ztadd));
+						qrddtvc.setText(MethodConfig.GetAddressExAnd(ztbdd));
 						if (zhtel.equals("") || zhtel.equals("null")
 								|| zhtel == null) {
 						} else {
@@ -731,11 +732,11 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 						if (ztddd.equals("null")) {
 							ztdlle.setVisibility(View.GONE);
 							ztdlld.setVisibility(View.GONE);
-							qrddtva.setText(zhdd);
-							qrddtvg.setText(xhdd);
-							qrddtvb.setText(ztadd);
-							qrddtvc.setText(ztbdd);
-							qrddtvd.setText(ztcdd);
+							qrddtva.setText(MethodConfig.GetAddressExAnd(zhdd));
+							qrddtvg.setText(MethodConfig.GetAddressExAnd(xhdd));
+							qrddtvb.setText(MethodConfig.GetAddressExAnd(ztadd));
+							qrddtvc.setText(MethodConfig.GetAddressExAnd(ztbdd));
+							qrddtvd.setText(MethodConfig.GetAddressExAnd(ztcdd));
 							if (zhtel.equals("") || zhtel.equals("null")
 									|| zhtel == null) {
 							} else {
@@ -809,12 +810,12 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 						} else {
 							if (ztedd.equals("null")) {
 								ztdlle.setVisibility(View.GONE);
-								qrddtva.setText(zhdd);
-								qrddtvg.setText(xhdd);
-								qrddtvb.setText(ztadd);
-								qrddtvc.setText(ztbdd);
-								qrddtvd.setText(ztcdd);
-								qrddtve.setText(ztddd);
+								qrddtva.setText(MethodConfig.GetAddressExAnd(zhdd));
+								qrddtvg.setText(MethodConfig.GetAddressExAnd(xhdd));
+								qrddtvb.setText(MethodConfig.GetAddressExAnd(ztadd));
+								qrddtvc.setText(MethodConfig.GetAddressExAnd(ztbdd));
+								qrddtvd.setText(MethodConfig.GetAddressExAnd(ztcdd));
+								qrddtve.setText(MethodConfig.GetAddressExAnd(ztddd));
 								if (zhtel.equals("") || zhtel.equals("null")
 										|| zhtel == null) {
 								} else {
@@ -891,13 +892,13 @@ public class Qrddactivity extends BaseActivity implements OnClickListener {
 									qrddtvftel.setText(ztetel);
 								}
 							} else {
-								qrddtva.setText(zhdd);
-								qrddtvg.setText(xhdd);
-								qrddtvb.setText(ztadd);
-								qrddtvc.setText(ztbdd);
-								qrddtvd.setText(ztcdd);
-								qrddtve.setText(ztddd);
-								qrddtvf.setText(ztedd);
+								qrddtva.setText(MethodConfig.GetAddressExAnd(zhdd));
+								qrddtvg.setText(MethodConfig.GetAddressExAnd(xhdd));
+								qrddtvb.setText(MethodConfig.GetAddressExAnd(ztadd));
+								qrddtvc.setText(MethodConfig.GetAddressExAnd(ztbdd));
+								qrddtvd.setText(MethodConfig.GetAddressExAnd(ztcdd));
+								qrddtve.setText(MethodConfig.GetAddressExAnd(ztddd));
+								qrddtvf.setText(MethodConfig.GetAddressExAnd(ztedd));
 								if (zhtel.equals("") || zhtel.equals("null")
 										|| zhtel == null) {
 								} else {

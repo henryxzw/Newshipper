@@ -32,7 +32,6 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.umeng.analytics.MobclickAgent;
 
 /**
  * @author mac 我的空间
@@ -181,7 +180,6 @@ public class MyInterspaceActivity extends BaseActivity implements
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 		phonea = sharedPreferences.getString(
 				getResources().getString(R.string.phone), "");
 		passworda = sharedPreferences.getString(
@@ -359,6 +357,5 @@ public class MyInterspaceActivity extends BaseActivity implements
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

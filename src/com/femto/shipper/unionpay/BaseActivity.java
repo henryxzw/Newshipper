@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Date;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,10 +39,10 @@ public abstract class BaseActivity extends Activity implements Callback,
     public static final int PLUGIN_NEED_UPGRADE = 2;
 
     /*****************************************************************
-     * mMode参数解释： "00" - 启动银联正式环境 "01" - 连接银联测试环境
+     * mMode参数解释： "00" - 启动银联正式环境 "00" - 连接银联测试环境
      *****************************************************************/
-    private final String mMode = "01";
-    private static final String TN_URL_01 = "http://101.231.204.84:8091/sim/getacptn";
+    private final String mMode = "00";
+    private static final String TN_URL_01 = "http://100.64.175.189:6009/demo/api_05_app/Form_6_2_AppConsume.aspx";
 
     private final View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
@@ -105,6 +106,7 @@ public abstract class BaseActivity extends Activity implements Callback,
             builder.create().show();
         } else {
             tn = (String) msg.obj;
+            Log.e("tag", tn);
             /*************************************************
              * 步骤2：通过银联工具类启动支付插件
              ************************************************/

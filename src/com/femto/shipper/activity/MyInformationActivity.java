@@ -45,7 +45,6 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.qiniu.android.storage.UpCompletionHandler;
 import com.qiniu.android.storage.UploadManager;
-import com.umeng.analytics.MobclickAgent;
 
 /**
  * @author mac 我的信息
@@ -379,7 +378,6 @@ public class MyInformationActivity extends BaseActivity implements
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 		phonea = sharedPreferences.getString(
 				getResources().getString(R.string.phone), "");
 		passworda = sharedPreferences.getString(
@@ -388,7 +386,6 @@ public class MyInformationActivity extends BaseActivity implements
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 
 	}
 }

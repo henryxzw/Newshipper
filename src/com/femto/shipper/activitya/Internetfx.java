@@ -1,9 +1,6 @@
 package com.femto.shipper.activitya;
 
 import com.femto.shipper.R;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.MobclickAgentJSInterface;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
@@ -29,7 +26,6 @@ public class Internetfx extends Activity implements OnClickListener {
 		setContentView(R.layout.intentjfbz);
 		intentjfrl = (RelativeLayout) findViewById(R.id.intentjfrl);
 		mywebview = (WebView) findViewById(R.id.mywebview);
-		new MobclickAgentJSInterface(this, mywebview);
 		webtitletv = (TextView) findViewById(R.id.webtitletv);
 		String a = "http://spvan.wsq.umeng.com";
 		mywebview.getSettings().setJavaScriptEnabled(true);
@@ -62,13 +58,11 @@ public class Internetfx extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	@Override

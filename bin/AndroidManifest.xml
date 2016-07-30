@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.femto.shipper"
     android:installLocation="auto"
-    android:versionCode="41"
-    android:versionName="1.4.1" >
+    android:versionCode="43"
+    android:versionName="1.4.3" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -118,14 +118,14 @@ android:configChanges="orientation|keyboardHidden"
     android:screenOrientation="portrait"
     android:windowSoftInputMode="adjustResize"/>
  <activity android:name="com.femto.shipper.unionpay.JARActivity">
-     
+    
  </activity>
         
  
         <activity
             android:name="com.femto.shipper.activitya.Welcomea"
             android:screenOrientation="portrait" >
-            <intent-filter>
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

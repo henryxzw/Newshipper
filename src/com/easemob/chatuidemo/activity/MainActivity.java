@@ -70,7 +70,6 @@ import com.femto.shipper.R;
 import com.femto.shipper.activity.HotCityActivity;
 import com.femto.shipper.application.Constant;
 import com.femto.shipper.application.DemoHXSDKHelper;
-import com.umeng.analytics.MobclickAgent;
 
 public class MainActivity extends BaseActivity implements EMEventListener {
 
@@ -132,8 +131,6 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		mainactivity = this;
 		// MobclickAgent.setDebugMode( true );
 		// --?--
-		MobclickAgent.updateOnlineConfig(this);
-
 		if (getIntent().getBooleanExtra("conflict", false)
 				&& !isConflictDialogShow) {
 			showConflictDialog();

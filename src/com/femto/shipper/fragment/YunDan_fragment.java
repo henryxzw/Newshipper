@@ -40,7 +40,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 @SuppressLint("SimpleDateFormat")
 public class YunDan_fragment extends BaseFragment implements
@@ -354,12 +353,10 @@ public class YunDan_fragment extends BaseFragment implements
 		} else {
 			select(type, id);
 		}
-		MobclickAgent.onPageStart("YunDan_fragment");
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPageEnd("YunDan_fragment");
 	}
 
 	@Override

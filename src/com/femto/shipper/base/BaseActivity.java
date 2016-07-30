@@ -38,21 +38,20 @@ public class BaseActivity extends FragmentActivity {
 		application = DemoApplication.getInstance();
 		imageLoader = ImageLoader.getInstance();
 	}
-
+	protected Myservice myservice;
 	@Override
 	protected void onResume() {
 		IntentFilter filter = new IntentFilter();
 		filter.addAction("ExitApp");
 		this.registerReceiver(this.broadcastreceiver, filter);
-		Myservice myservice = new Myservice();
+		 myservice = new Myservice();
 		IntentFilter filtera = new IntentFilter();
 		filtera.addAction("com.femto.shipper.activitya.Aapdbroad");
 		this.registerReceiver(myservice, filtera);
 		super.onResume();
 	}
 	
-	
-
+		
 	class Myservice extends BroadcastReceiver {
 
 		@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -107,6 +106,7 @@ public class BaseActivity extends FragmentActivity {
 	@Override
 	protected void onDestroy() {
 		this.unregisterReceiver(this.broadcastreceiver);
+		this.unregisterReceiver(myservice);
 		super.onDestroy();
 	}
 

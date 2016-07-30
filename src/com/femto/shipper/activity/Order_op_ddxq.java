@@ -20,7 +20,6 @@ import com.femto.shipper.R;
 import com.femto.shipper.base.BaseActivity;
 import com.femto.shipper.utils.LogUtils;
 import com.femto.shipper.utils.ToolUtils;
-import com.umeng.analytics.MobclickAgent;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class Order_op_ddxq extends BaseActivity implements OnClickListener {
@@ -505,11 +504,9 @@ public class Order_op_ddxq extends BaseActivity implements OnClickListener {
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

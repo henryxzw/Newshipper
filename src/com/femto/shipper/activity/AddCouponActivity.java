@@ -38,7 +38,6 @@ import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class AddCouponActivity extends BaseActivity implements OnClickListener {
 	private MyAdapter adapter;
@@ -275,11 +274,9 @@ public class AddCouponActivity extends BaseActivity implements OnClickListener {
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

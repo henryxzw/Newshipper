@@ -45,7 +45,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 public class YiDiDengluActivity extends BaseActivity implements OnClickListener {
@@ -332,14 +331,12 @@ public class YiDiDengluActivity extends BaseActivity implements OnClickListener 
 	protected void onResume() {
 		super.onResume();
 		JPushInterface.onResume(mContext);
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		JPushInterface.onPause(mContext);
-		MobclickAgent.onPause(this);
 	}
 
 	@Override

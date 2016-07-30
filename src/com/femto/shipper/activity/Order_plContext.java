@@ -38,7 +38,6 @@ import com.google.android.gms.internal.el;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class Order_plContext extends BaseActivity implements OnClickListener {
 	private ImageView OrderD_zhuangtai;
@@ -301,11 +300,9 @@ public class Order_plContext extends BaseActivity implements OnClickListener {
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

@@ -1,7 +1,6 @@
 package com.femto.shipper.activitya;
 
 import com.femto.shipper.R;
-import com.umeng.analytics.MobclickAgent;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -110,14 +109,12 @@ public class Lxrlb extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		cursor.close();
-		MobclickAgent.onPause(this);
 	}
 
 	@Override

@@ -41,7 +41,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class Order_DHCX extends BaseFragment implements IXListViewListener,
 		OnClickListener {
@@ -180,12 +179,10 @@ public class Order_DHCX extends BaseFragment implements IXListViewListener,
 	public void onResume() {
 		super.onResume();
 		getdindanliebiao(0);
-		MobclickAgent.onPageStart("Order_DHCX");
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPageEnd("Order_DHCX");
 	}
 
 	@Override

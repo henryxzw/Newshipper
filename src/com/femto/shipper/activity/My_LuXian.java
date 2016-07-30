@@ -35,7 +35,6 @@ import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class My_LuXian extends BaseActivity implements
 		com.femto.shipper.adapter.SlideCutListView.RemoveListener {
@@ -292,11 +291,9 @@ public class My_LuXian extends BaseActivity implements
 
 	public void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	public void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 }

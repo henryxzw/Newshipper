@@ -27,7 +27,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class ForgetPasswordActivity extends BaseActivity implements
 		OnClickListener {
@@ -189,14 +188,12 @@ public class ForgetPasswordActivity extends BaseActivity implements
 	protected void onResume() {
 		super.onResume();
 		JPushInterface.onResume(mContext);
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		JPushInterface.onPause(mContext);
-		MobclickAgent.onPause(this);
 	}
 
 	private CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) {

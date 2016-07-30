@@ -1,8 +1,6 @@
 package com.femto.shipper.activitya;
 
 import com.femto.shipper.R;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.MobclickAgentJSInterface;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -28,7 +26,6 @@ public class Intentfwxy extends Activity implements OnClickListener
 		setContentView(R.layout.intentfwxy);
 		intentfwxy = (RelativeLayout) findViewById(R.id.intentfwxy);
 		mywebviewa = (WebView) findViewById(R.id.mywebviewa);
-		new MobclickAgentJSInterface(this, mywebviewa);
 		webtitletva = (TextView) findViewById(R.id.webtitletva);
 		String a = "http://www.spvan.com/mycontent.aspx?page=user_terms";
 		mywebviewa.loadUrl(a);
@@ -48,14 +45,12 @@ public class Intentfwxy extends Activity implements OnClickListener
 	protected void onResume()
 	{
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause()
 	{
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	@Override

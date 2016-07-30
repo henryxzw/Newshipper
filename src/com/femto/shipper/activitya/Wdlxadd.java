@@ -32,7 +32,6 @@ import com.femto.shipper.utils.ToolUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.umeng.analytics.MobclickAgent;
 
 public class Wdlxadd extends BaseActivity implements OnItemClickListener,
 		OnItemLongClickListener {
@@ -242,13 +241,11 @@ public class Wdlxadd extends BaseActivity implements OnItemClickListener,
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	private void getbundle() {

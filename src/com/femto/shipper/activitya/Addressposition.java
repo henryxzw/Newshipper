@@ -7,7 +7,6 @@ import com.baidu.location.LocationClientOption;
 import com.baidu.location.LocationClientOption.LocationMode;
 import com.femto.shipper.R;
 import com.femto.shipper.base.BaseActivity;
-import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -21,6 +20,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -42,7 +42,7 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 	public static int mapclose = 0;
 	private Bundle bundlea, bundleb, bundlec, bundled;
 	@SuppressWarnings("unused")
-	private String address = "address", lat = "lat", lon = "lon",
+	private String address = "address",addressDetial="", lat = "lat", lon = "lon",
 			name = "name", tel = "tel", getaddress, getlat, getlon, etname,
 			ettel, getname, gettel, djddf, mytime, xzdsj, straddptva, ztdalat,
 			ztdalon, ztdblat, ztdblon, ztdclat, ztdclon, ztddlat, ztddlon,
@@ -148,7 +148,9 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 		getaddress = straddress;
 		getlat = strlat;
 		getlon = strlon;
-		addptva.setText(straddress);
+		int index = straddress.indexOf("&");
+		
+		addptva.setText(straddress.substring(index+1));
 		addptva.setTextColor(Color.BLACK);
 		loclient.requestLocation();
 		loclient.stop();
@@ -188,13 +190,11 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 
 	@Override
 	protected void onResume() {
-		MobclickAgent.onResume(this);
 		super.onResume();
 	}
 
 	@Override
 	protected void onPause() {
-		MobclickAgent.onPause(this);
 		super.onPause();
 	}
 
@@ -254,7 +254,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = zhlat;
 				getlon = zhlon;
 				if (!zhdd.trim().equals("null")) {
-					addptva.setText(zhdd);
+				   int index = zhdd.indexOf("&");
+					addptva.setText(zhdd.substring(index+1));
 					if (!zhname.trim().equals("null")) {
 						addpetb.setText(zhname);
 					}
@@ -273,7 +274,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = xhlat;
 				getlon = xhlon;
 				if (!xhdd.trim().equals("null")) {
-					addptva.setText(xhdd);
+					int index = xhdd.indexOf("&");
+					addptva.setText(xhdd.substring(index+1));
 					if (!xhname.trim().equals("null")) {
 						addpetb.setText(xhname);
 					}
@@ -286,7 +288,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = ztdalat;
 				getlon = ztdalon;
 				if (!ztadd.trim().equals("null")) {
-					addptva.setText(ztadd);
+					int index = ztadd.indexOf("&");
+					addptva.setText(ztadd.substring(index+1));
 					if (!ztaname.trim().equals("null")) {
 						addpetb.setText(ztaname);
 					}
@@ -299,7 +302,9 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = ztdblat;
 				getlon = ztdblon;
 				if (!ztbdd.trim().equals("null")) {
-					addptva.setText(ztbdd);
+					int index = ztbdd.indexOf("&");
+					
+					addptva.setText(ztbdd.substring(index+1));
 					if (!ztbname.trim().equals("null")) {
 						addpetb.setText(ztbname);
 					}
@@ -312,7 +317,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = ztdclat;
 				getlon = ztdclon;
 				if (!ztcdd.trim().equals("null")) {
-					addptva.setText(ztcdd);
+					int index = ztcdd.indexOf("&");
+					addptva.setText(ztcdd.substring(index+1));
 					if (!ztcname.trim().equals("null")) {
 						addpetb.setText(ztcname);
 					}
@@ -325,7 +331,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = ztddlat;
 				getlon = ztddlon;
 				if (!ztddd.trim().equals("null")) {
-					addptva.setText(ztddd);
+					int index = ztddd.indexOf("&");
+					addptva.setText(ztddd.substring(index+1));
 					if (!ztdname.trim().equals("null")) {
 						addpetb.setText(ztdname);
 					}
@@ -338,7 +345,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 				getlat = ztdelat;
 				getlon = ztdelon;
 				if (!ztedd.trim().equals("null")) {
-					addptva.setText(ztedd);
+					int index = ztedd.indexOf("&");
+					addptva.setText(ztedd.substring(index+1));
 					if (!ztename.trim().equals("null")) {
 						addpetb.setText(ztename);
 					}
@@ -352,6 +360,7 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 			bundlea = new Bundle();
 			bundlea = getIntent().getExtras();
 			getaddress = bundlea.getString(address);
+			addressDetial = bundlea.getString("addressDetail");
 			getlat = bundlea.getString(lat);
 			getlon = bundlea.getString(lon);
 			djddf = bundlea.getString("djddf");
@@ -409,7 +418,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 			if (!xiugaitel.equals("")) {
 				addpetc.setText(xiugaitel);
 			}
-			addptva.setText(getaddress);
+			int index = getaddress.indexOf("&");
+			addptva.setText(getaddress.substring(index+1));
 		} else if (mapclose == 2) {
 			bundlea = new Bundle();
 			bundlea = getIntent().getExtras();
@@ -467,7 +477,8 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 			bcztdwb = bundlea.getInt("bcztdwb");
 			bcztdcm = bundlea.getInt("bcztdcm");
 			bcztscm = bundlea.getInt("bcztscm");
-			addptva.setText(getaddress);
+			int index = getaddress.indexOf("&");
+			addptva.setText(getaddress.substring(index+1));
 			if (getname.trim().equals("")) {
 				addpetb.setText(xiugainame);
 			} else {
@@ -598,7 +609,7 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 						null);
 				for (cursora.moveToFirst(); !cursora.isAfterLast(); cursora
 						.moveToNext()) {
-					if (add.equals(cursora.getString(1))) {
+					if (cursora.getString(1).endsWith(add)) {
 						sfxt = 1;
 						break;
 					}
@@ -610,12 +621,12 @@ public class Addressposition extends BaseActivity implements OnClickListener,
 							sh.delete(cursora.getInt(0));
 						}
 					}
-					sh.insert(add, etname, ettel, getlat, getlon);
+					sh.insert(addressDetial+"&"+add, etname, ettel, getlat, getlon);
 				}
 				cursora.close();
 				intentb = new Intent(Addressposition.this, Ycactivitya.class);
 				bundleb = new Bundle();
-				bundleb.putString("newaddress", add);
+				bundleb.putString("newaddress", addressDetial+"&"+add);
 				bundleb.putString("newname", etname);
 				bundleb.putString("newtel", ettel);
 				bundleb.putString("newlat", getlat);

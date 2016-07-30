@@ -26,7 +26,6 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.qiniu.android.storage.UpCompletionHandler;
 import com.qiniu.android.storage.UploadManager;
-import com.umeng.analytics.MobclickAgent;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -223,7 +222,6 @@ public class Ycactivityb extends BaseActivity implements OnClickListener,
 		super.onResume();
 		sctp();
 		ycbgv.setAdapter(gridadapter);
-		MobclickAgent.onResume(this);
 	}
 
 	class Myasynctaska extends AsyncTask<String, String, String> {
@@ -453,7 +451,6 @@ public class Ycactivityb extends BaseActivity implements OnClickListener,
 	@Override
 	protected void onPause() {
 		super.onPause();
-		MobclickAgent.onPause(this);
 	}
 
 	private void sctp() {
